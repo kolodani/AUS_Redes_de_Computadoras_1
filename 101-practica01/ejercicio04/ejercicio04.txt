@@ -1,0 +1,61 @@
+4) Determine los bits del netid y hostid de las direcciones IP anteriores.
+
+a)  10.250.1.1
+Clase A, el netid es 10 y el hostid es 250.1.1
+
+b)  150.10.15.0
+Clase B, el netid es 150.10 y el hostid es 15.0
+
+c)  192.14.2.0
+Clase C, el netid es 192.14.2 y el hostid es 0
+
+d)  148.17.9.1
+Clase B, el netid es 148.17 y el hostid es 9.1
+
+e)  193.42.1.1
+Clase C, el netid es 193.42.1 y el hostid es 1
+
+f)  126.8.156.0
+Clase A, el netid es 126 y el hostid es 8.156.0
+
+g)  220.200.23.1
+Clase C, el netid es 220.200.23 y el hostid es 1
+
+h)  230.230.45.58
+Clase D, el netid es 230.230.45 y el hostid es 58
+
+i)  177.100.18.4
+Clase B, el netid es 177.100 y el hostid es 18.4
+
+j)  119.18.45.0
+Clase A, el netid es 119 y el hostid es 18.45.0
+
+k)  249.240.80.78
+Clase E, el netid es 249.240.80 y el hostid es 78
+
+l)  199.155.77.56
+Clase C, el netid es 199.155.77 y el hostid es 56
+
+m)  117.89.56.45
+Clase A, el netid es 117 y el hostid es 89.56.45
+
+n)  215.45.45.0
+Clase C, el netid es 215.45.45 y el hostid es 0
+
+ñ)  199.200.15.0
+Clase C, el netid es 199.200.15 y el hostid es 0
+
+o)  95.0.21.90
+Clase A, el netid es 95 y el hostid es 0.21.90
+
+p)  33.0.0.0
+Clase A, el netid es 33 y el hostid es 0.0.0
+
+q)  158.98.80.0
+Clase B, el netid es 158.98 y el hostid es 80.0
+
+r)  219.21.56.0
+Clase C, el netid es 219.21.56 y el hostid es 0
+
+s)  222.2.2.2
+Clase C, el netid es 222.2.2 y el hostid es 2

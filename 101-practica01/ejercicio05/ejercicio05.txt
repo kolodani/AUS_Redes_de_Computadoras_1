@@ -1,0 +1,136 @@
+5) Usando los bits obtenidos en el punto anterior proporcione segun corresponda
+la direccion IP de red y/o brodcast correspondiente y en caso de ser una direccion
+de host determine en decimal cual es su orden.
+
+a)  10.250.1.1
+Clase A, el netid es 10 y el hostid es 250.1.1
+direccion ip de red es 10.0.0.0
+direccion de broadcast es 10.255.255.255
+host disponible 16777214
+que van desde 10.0.0.1 hasta 10.255.255.254
+
+b)  150.10.15.0
+Clase B, el netid es 150.10 y el hostid es 15.0
+direccion ip de red es 150.10.0.0
+direccion de broadcast es 150.10.255.255
+host disponible 65534
+que van desde 150.10.0.1 hasta 150.10.255.254
+
+c)  192.14.2.0
+Clase C, el netid es 192.14.2 y el hostid es 0
+direccion ip de red es 192.14.2.0
+direccion de broadcast es 192.14.2.255
+host disponible 254
+que van desde 192.14.2.1 hasta 192.14.2.254
+
+d)  148.17.9.1
+Clase B, el netid es 148.17 y el hostid es 9.1
+direccion ip de red es 148.17.0.0
+direccion de broadcast es 148.17.255.255
+host disponible 65534
+que van desde 148.17.0.1 hasta 148.17.255.254
+
+e)  193.42.1.1
+Clase C, el netid es 193.42.1 y el hostid es 1
+direccion ip de red es 193.42.1.0
+direccion de broadcast es 193.42.1.255
+host disponible 254
+que van desde 193.42.1.0 hasta 193.42.1.254
+
+f)  126.8.156.0
+Clase A, el netid es 126 y el hostid es 8.156.0
+direccion ip de red es 126.0.0.0
+direccion de broadcast es 126.255.255.255
+host disponible 16777214
+que van desde 126.0.0.1 hasta 126.255.255.254
+
+g)  220.200.23.1
+Clase C, el netid es 220.200.23 y el hostid es 1
+direccion ip de red es 220.200.23.0
+direccion de broadcast es 220.200.23.255
+host disponible 254
+que van desde 220.200.23.1 hasta 220.200.23.254
+
+h)  230.230.45.58
+Clase D
+
+
+i)  177.100.18.4
+Clase B, el netid es 177.100 y el hostid es 18.4
+direccion ip de red es 177.100.0.0
+direccion de broadcast es 177.100.255.255
+host disponible 65534
+que van desde 177.100.0.1 hasta 177.100.255.254
+
+j)  119.18.45.0
+Clase A, el netid es 119 y el hostid es 18.45.0
+direccion ip de red es 119.0.0.0
+direccion de broadcast es 119.255.255.255
+host disponible 16777214
+que van desde 119.0.0.1 hasta 119.255.255.254
+
+k)  249.240.80.78
+Clase E
+
+l)  199.155.77.56
+Clase C, el netid es 199.155.77 y el hostid es 56
+direccion ip de red es 199.155.77.0
+direccion de broadcast es 199.155.77.255
+host disponible 254
+que van desde 199.155.77.1 hasta 199.155.77.254
+
+m)  117.89.56.45
+Clase A, el netid es 117 y el hostid es 89.56.45
+direccion ip de red es 117.0.0.0
+direccion de broadcast es 117.255.255.255
+host disponible 16777214
+que van desde 117.0.0.1 hasta 117.255.255.254
+
+n)  215.45.45.0
+Clase C, el netid es 215.45.45 y el hostid es 0
+direccion ip de red es 215.45.45.0
+direccion de broadcast es 215.45.45.255
+host disponible 254
+que van desde 215.45.45.1 hasta 215.45.45.254
+
+ñ)  199.200.15.0
+Clase C, el netid es 199.200.15 y el hostid es 0
+direccion ip de red es 199.200.15.0
+direccion de broadcast es 199.200.15.255
+host disponible 254
+que van desde 199.200.15.1 hasta 199.200.15.255
+
+o)  95.0.21.90
+Clase A, el netid es 95 y el hostid es 0.21.90
+direccion ip de red es 95.0.0.0
+direccion de broadcast es 95.255.255.255
+host disponible 16777214
+que van desde 95.0.0.1 hasta 95.255.255.254
+
+p)  33.0.0.0
+Clase A, el netid es 33 y el hostid es 0.0.0
+direccion ip de red es 33.0.0.0
+direccion de broadcast es 33.255.255.255
+host disponible 16777214
+que van desde 33.0.0.1 hasta 33.255.255.254
+
+q)  158.98.80.0
+Clase B, el netid es 158.98 y el hostid es 80.0
+direccion ip de red es 158.98.0.0
+direccion de broadcast es 158.98.255.255
+host disponible 65534
+que van desde 158.98.0.1 hasta 158.98.255.254
+
+r)  219.21.56.0
+Clase C, el netid es 219.21.56 y el hostid es 0
+direccion ip de red es 219.21.56.0
+direccion de broadcast es 219.21.56.255
+host disponible 254
+que van desde 219.21.56.1 hasta 219.21.56.254
+
+s)  222.2.2.2
+Clase C, el netid es 222.2.2 y el hostid es 2
+direccion ip de red es 222.2.2.0
+direccion de broadcast es 222.2.2.255
+host disponible 254
+que van desde 222.2.2.1 hasta 222.2.2.254

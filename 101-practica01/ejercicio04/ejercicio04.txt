@@ -22,7 +22,7 @@ g)  220.200.23.1
 Clase C, el netid es 220.200.23 y el hostid es 1
 
 h)  230.230.45.58
-Clase D, el netid es 230.230.45 y el hostid es 58
+Clase D
 
 i)  177.100.18.4
 Clase B, el netid es 177.100 y el hostid es 18.4
@@ -31,7 +31,7 @@ j)  119.18.45.0
 Clase A, el netid es 119 y el hostid es 18.45.0
 
 k)  249.240.80.78
-Clase E, el netid es 249.240.80 y el hostid es 78
+Clase E
 
 l)  199.155.77.56
 Clase C, el netid es 199.155.77 y el hostid es 56

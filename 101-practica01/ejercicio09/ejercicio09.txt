@@ -1,0 +1,15 @@
+9) Su red utiliza la direccion IP 172.30.0.0/16. inicialemte existen 25 subredes con un minimo de 1000 host por subred.
+   Se proyecta una crecimiento en los proximos años de un total de 55 subredes. ¿Que mascara de subred se debera
+   utilizar? Responda en notacion dotted.
+
+Respuesta:
+- Primero se trata de una red de clase B
+- Luego la mascada es 255.255.0.0, lo que me dice que hay 65536 direcciones posibles
+- Si inicialmente la red tiene 25 subredes y se proyecta un crecimiento total de
+  55 redes y cada una debe tener como minimo 1000 host.
+- Entonces tomo primero las 25 subredes, en ese momento se podia dividir por 32
+  subredes y cada una tendria 2048 direcciones, 2046 hosts.
+- Luego se proyecta un crecimiento de 55 subredes, entonces se divide por 64
+  subredes y cada una tendria 1024 direcciones, 1022 hosts.
+- Lo que por ultimo me dice que la mascara de subred es 255.255.252.0 o en
+  binario 11111111.11111111.11111100.00000000

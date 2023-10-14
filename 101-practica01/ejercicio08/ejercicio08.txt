@@ -1,0 +1,20 @@
+8) Dada la subred 201.154.10.0 con mascara 255.255.255.224 subdividala en
+subredes de 12 hosts como minimo y obtenga el host 4, 7, 9 de la 1ra subred y
+el host 3, 8, 11 de la 2da subred.
+
+Respuesta:
+- Lo primero, tengo una red de clase c, por lo que inicialmente tengo 256 direcciones
+- Luego, tengo la mascara, 255.255.255.224, que en binario es 11111111.11111111.11111111.11100000,
+  lo que significa que tengo 5 bits para subredes, y son 32 direcciones.
+- Ahora tengo que dividir la red en subredes para 12 hosts como minimo en cada una,
+  por lo que voy a dividir la red de 32 en dos redes de 16 direcciones cada una.
+- La primera red va a ser de 201.154.10.0 a 201.154.10.15
+- La segunda red va a ser de 201.154.10.16 a 201.154.10.31
+- La subred 1:
+    host 4: 201.154.10.4
+    host 7: 201.154.10.7
+    host 9: 201.154.10.9
+- La subred 2:
+    host 3: 201.154.10.19
+    host 8: 201.154.10.24
+    host 11: 201.154.10.27

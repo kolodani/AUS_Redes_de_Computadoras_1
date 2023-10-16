@@ -1,0 +1,15 @@
+11) De la siguiente lista de direcciones IP
+    172.16.66.24, 172.16.65.33, 172.16.64.42, 172.16.63.51
+    ¿Cuales no pertenece a la misma subred si se ha utilazado la mascara 255.255.224.0?
+
+Respuesta:
+- La red es de clase B
+- La mascara 255.255.224.0 es igual a /19.
+- La red dispone de 8192 direcciones.
+- Lo que nos dice que las subredes de esta red de clase B son:
+    - 172.16.0.0 - 172.16.31.255
+    - 172.16.32.0 - 172.16.63.255
+    - 172.16.64.0 - 172.16.95.255
+    - .......
+- Lo que nos muestra que la direccion que no pertenece a la misma subred es:
+    - 172.16.63.51

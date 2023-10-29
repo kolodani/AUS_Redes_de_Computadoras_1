@@ -1,0 +1,27 @@
+12 ) Basado en la información provista en cada gráfico en conjunto con la red o
+redes disponibles, se le solicita que diseñe un esquema de direccionamiendo
+(sin VLSM) de forma tal que cumpla con el mínimo de subnets solicitadas y de
+hosts pero que soporte un crecimiento del X % de ambos.
+Marque cada subred con un círculo y reponda lo siguiente:
+clase,
+tipo de red,
+máscara asignada,
+mínimas subnets,
+total de subnets (cremiento),
+número de hosts en la subnet de mayor tamaño,
+número de hosts totales (crecimiento) en la misma subnet más uno,
+dirección de red y
+broadcast ordenados de manera tal que la primera subred se le asigne al grupo de
+con mayor cantidad de hosts hasta llegar a la subnet con la menor cantidad de dispositivos.
+
+a) 172.16.0.0, X=100
+b) 135.126.0.0, X=30
+c) 172.16.0.0, X=25
+d) 135.126.0.0, X=70
+e) 210.15.10.0, X=100
+f) 10.0.0.0, X=20
+g) 177.35.0.0, X=125
+h) 192.168.1.0, X=85
+i) 148.55.0.0, X=15
+j) 172.30.0.0, X=110
+k) 172.1.4.0/22, X=0

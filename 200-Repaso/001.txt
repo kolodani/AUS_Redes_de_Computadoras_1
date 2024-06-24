@@ -1,0 +1,116 @@
+-- INTRODUCCION --
+
+Objetivos de las redes de ordenadores
+
+* Compartir recursos: discos duros, impresoras, programas.
+* Compartir informacion: acceso a documentos remotos...
+* Merjor la fiabilidad: Alternativas, replicacion...
+* Incrementra el rendimiento: Maquinas trabajando juntas...
+* Servir de medio de comunicacion de personas/comunidades
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+Estructuras de las redes
+
+Diversas maquinas (hosts) se conectan a una subred de comunicaciones que permite el dialogo entre ellas.
+Dos formas fundamentales de diseñar la subred de comunicaciones:
+* Mediante canales punto-a-punto
+* mediante canales de radiado broadcast
+Normalmente hay una mezcla de muchos canales de los dos tipos.
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+Topologias comunes en redes
+
+* estrella
+* anillo
+* arbol
+* totalmente conectada
+* parcialmente conectada
+* bus
+* satelite
+* anillo
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+Protocolo de Comunicaciones
+
+"Conjunto de reglas (interfaces, algoritmos, formatos de mensajes...) que conocen las entidades que intercambian datos a traves de una red de comunicaciones"
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+Jerarquias de protocolos
+
+En la mayoria de las redes se utilizan varios protocolos con distintos propositos.
+Todos esos protocolos se organizan normalmente en niveles o capas.
+* cada nivel ofrece servicios al nivel superior
+* cada nivel se apoya en los servicios ofrecidos por el nivel inferior
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+Maquina origen de una comunicacion
+
+El mecanismo basico en cada nivel es:
+* tomar las unidades de datos que le ofrece el nivel superior
+* procesarlos (agrupando, separando, ...) y formar sus propias unidades de datos (añadiendo informacion de control en cabeceras)
+* paar sus unidades de datos al nivel inferior
+
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+Maquina destino de una comunicacion
+
+El mecanimo basico en cada nivel es:
+* tomar las unidades de datos que le ofrece el nivel inferior
+* identificar las cabecetas introducidas en el nivel gemelo de la maquina origen procesar los datos adecuadamente (agrupando, separando, ...)
+* pasar los datos al nivel superior
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+Arquitectura de Red
+
+Conjunto de niveles y protocolos de una determinada red de ordenadores.
+Las distintas arquitecturas de redes se diferencian en:
+* Numeros de niveles, y servicios de cada nivel
+* Protocolos de cada nivel
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+Arquirectura OSI
+
+En 1983 ISO (Organizacion de estandares internacionales) propone un modelo de referencia para arquitectura de redes:
+Modelo de referencias para la interconexion de sistemas abiertos (ISO OSI reference model).
+El modelo OSI no es estrictamente una arquitectura, sino un marco al que deben someterse protocolos concretos para establecer una arquitectura "conforme a OSI"
+OSI no define los servicios y protocolos exactos para cada nivel, solo aquellos de lo que cada nivel debe ocuparse.
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+El Nivel Fisico
+
+Se ocupa de enviar y recibir bits sobre un medio fisico de transmision:
+* Debe tener en cuenta el tipo de medio de transmision: electrico, optico, inalambrico...
+* Debe establecer una forma de convertir un bit en una señal transportable por el medio de transmision.
+* Debe asegurarse que la forma de transmitir un bit a 1 es reconocida en recepcion como un bit a 1.
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+El nivel de Enlace
+
+Transforma un sistema de transmision crudo (lo que le ofrece el nivel fisico) en una linea libre de errores de transmision (lo que ofrece para el nivel de red) entre maquinas conectadas al mismo medio de transmision.
+* Forma tramas.
+* Se encarga de detectar las tramas recibidas con errores de transmision. Ademas, puede
+    * descarta las tramas con errores, y/o
+    * corregir los errores de las tramas con errores, y/o
+    * pedir la retransmision de las tramas con errores
+* Se ocupa de resolver los problemas de acceso a un medio de transmision compartido.
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+Nivel de Red
+
+Se encarga de interconexion de maquinas que no estan conectadas al mismo dedio de transmision. por ello su mision fundamental es el encaminamiento de paquetes desde la maquina origen a la maquina de destino.
+* El encaminamiento puede ser estatico o dinamico
+* Gestina las congestiones y cuellos de botella.
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+

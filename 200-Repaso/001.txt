@@ -114,3 +114,55 @@ Se encarga de interconexion de maquinas que no estan conectadas al mismo dedio d
 
 -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 
+Nivel de Transporte
+
+* Se encarga de gobernar el acceso multiple a la red de los diversos procesos de la misma maquina que quieran usarla, creando una abstraccion para ello: los puestos.
+* Realiza su trabajo extremo a extremo, es decir, no tiene en cuenta si emisor y receptor estan en el mismo medio o tienen que comunicarse a traves de maquina intermedias. Los niveles inferiores (red, enlace, fisico) se dice que trabajo salto-a-salto.
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+Nivel de Sesion
+
+Permite a usuarios en distintas maquinas establecer sesiones entre ellos:
+* Proporciona mecanismos para controlar el dialogo: Ej: Turno, gestion de tokens.
+* Gestiona la sincronizacion entre maquinas.
+* Ejemplo: pizzarra compartida.
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+Nivel de Presentacion
+
+Se ocupa de la sintaxis y semantica de la informacion tranferida entre maquinas:
+* Orden de bytes de enteros (little endian/big endian).
+* Representacion de caracteres alfabeticos.
+* Tamaño de los tipos de datos.
+Tipicamente traduce los datos a un formato normalizado que todas las maquinas entienden.Tambien se suele ocupar de la compresion y cifrado de datos.
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+Nivel de Aplicacion
+
+Contiene un conjunto de protocolos que son de utilidad directa para aplicaciones que usan la red:
+* Protocolos que permiten transmitir un fichero entre maquinas.
+* Protocolos que permiten enviar un mensaje de correo electronico.
+* ...
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+Arquitectura TCP/IP
+
+Su desarrollo comenzo a finales de los 60, como proyecto financiado por el gobierno de los Estados Unidos.
+Autentico sistema abierto: Los protocolos y sus implementaciones estan disponibles publicamente.
+Constituyen el armazon sobre el que se situa internet.
+No se ajusta exactamente al modelo de referencia OSI, surgio antes y OSI no intento incluirlo.
+Su exito (a partir del de internet) ha hecho que sea la arquitectura mas importante y conocida actualmente.
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+La pila TCP/IP
+
+Nivel de Aplicacion: DNS, SMTP, HTTP...
+Nivel de Transporte: TCP, UDP
+Nivel de Red: IP, ICMP
+Nivel de Enlace: Ethernet, PPP, ADSL
+

@@ -58,7 +58,7 @@ Clase: C
 numero de bits tomados de la porcion hostid: 3 bits
 numero total de subredes obtenidas: 32
 numero de direcciones de hosts disponibles: 192
-el rango de IPs de la subred W: 193.42.1.0 - 193.42.1.31
+el rango de IPs de la subred W: 193.42.1.0 - 193.42.1.7
 el numero de subred de la subred X: 193.42.1.24
 la direccion de broadcast para la subred Y: 193.42.1.47
 las direcciones de hosts de la subred Z: 193.42.1.65 - 193.42.1.71

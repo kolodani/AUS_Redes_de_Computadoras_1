@@ -12,4 +12,4 @@ Respuesta:
 - Luego se proyecta un crecimiento de 55 subredes, entonces se divide por 64
   subredes y cada una tendria 1024 direcciones, 1022 hosts.
 - Lo que por ultimo me dice que la mascara de subred es 255.255.252.0 o en
-  binario 11111111.11111111.11111100.00000000
+  binario 11111111.11111111.11111100.00000000 o lo que es igual a /22

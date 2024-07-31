@@ -1,0 +1,58 @@
+6) Para las siguientes direcciones en notacion CIDR determine la mascara de red en notacion dotted y que tipo de direccion es: red, broadcast o host.
+
+a) 11.250.1.1/21
+mascara de la red: 255.255.248.0
+la direccion es: host
+
+b) 11.250.1.1/29
+mascara de la red: 255.255.255.248
+la direccion es: host
+
+c) 192.14.2.0/26
+mascara de la red: 255.255.255.192
+la direccion es: red
+
+d) 148.17.9.255/25
+mascara de la red: 255.255.255.128
+la direccion es: broadcast
+
+e) 3.3.3.3/30
+mascara de la red: 255.255.255.252
+la direccion es: broadcast
+
+f) 21.0.0.8/27
+mascara de la red: 255.255.255.224
+la direccion es: host
+
+g) 35.128.0.16/28
+mascara de la red: 255.255.255.240
+la direccion es: red
+
+h) 129.100.1.0/18
+mascara de la red: 255.255.192.0
+la direccion es: host
+
+i) 129.100.1.255/23
+mascara de la red: 255.255.254.0
+la direccion es: broadcast
+
+j) 129.100.1.255/22
+mascara de la red: 255.255.252.0
+la direccion es: red
+
+k) 129.100.1.0/24
+mascara de la red: 255.255.255.0
+la direccion es: red
+
+l) 120.0.255.255/15
+mascara de la red: 255.254.0.0
+la direccion es: host
+
+m) 120.0.255.255/17
+mascara de la red: 255.255.128.0
+la direccion es: broadcast
+
+n) 222.2.2.2/27
+mascara de la red: 255.255.255.224
+la direccion es: host
+

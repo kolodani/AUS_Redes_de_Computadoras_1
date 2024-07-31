@@ -81,14 +81,14 @@ HostId: 89.56.45
 n) 215.45.45.0
 Clase C
 255.255.255.0
-NetId: 215
-HostId: 45.45.0
+NetId: 215.45.45
+HostId: 0
 
 ñ) 199.200.15.0
 Clase C
 255.255.255.0
-NetId: 199
-HostId: 200.15.0
+NetId: 199.200.15
+HostId: 0
 
 o) 95.0.21.90
 Clase A

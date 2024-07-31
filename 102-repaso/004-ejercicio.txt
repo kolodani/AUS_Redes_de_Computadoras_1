@@ -1,0 +1,122 @@
+4) Determine los bits del netid y hostid de las direcciones IP anteriores.
+
+a) 10.250.1.1
+Clase A
+255.0.0.0
+NetId: 10
+HostId: 250.1.1
+
+b) 150.10.15.0
+Clase B
+255.255.0.0
+NetId: 150.10
+HostId: 15.0
+
+c) 192.14.2.0
+Clase C
+255.255.255.0
+NetId: 192.14.2
+HostId: 0
+
+d) 148.17.9.1
+Clase B
+255.255.0.0
+NetId: 148.17
+HostId: 9.1
+
+e) 193.42.1.1
+Clase C
+255.255.255.0
+NetId: 193.42.1
+HostId: 1
+
+f) 126.8.156.0
+Clase A
+255.0.0.0
+NetId: 126
+HostId: 8.156.0
+
+g) 220.200.23.1
+Clase C
+255.255.255.0
+NetId: 220.200.23
+HostId: 1
+
+h) 230.230.45.58
+Clase D
+255.255.255.255
+NetId: -----
+HostId: ----
+
+i) 177.100.18.4
+Clase B
+255.255.0.0
+NetId: 177.100
+HostId: 18.4
+
+j) 119.18.45.0
+Clase A
+255.0.0.0
+NetId: 119
+HostId: 18.45.0
+
+k) 249.240.80.78
+Clase E
+255.255.255.255
+NetId: -----
+HostId: ----
+
+l) 199.155.77.56
+Clase C
+255.255.255.0
+NetId: 199.155.77
+HostId: 56
+
+m) 117.89.56.45
+Clase A
+255.0.0.0
+NetId: 117
+HostId: 89.56.45
+
+n) 215.45.45.0
+Clase C
+255.255.255.0
+NetId: 215
+HostId: 45.45.0
+
+ñ) 199.200.15.0
+Clase C
+255.255.255.0
+NetId: 199
+HostId: 200.15.0
+
+o) 95.0.21.90
+Clase A
+255.0.0.0
+NetId: 95
+HostId: 0.21.90
+
+p) 33.0.0.0
+Clase A
+255.0.0.0
+NetId: 33
+HostId: 0.0.0
+
+q) 158.98.80.0
+Clase B
+255.255.0.0
+NetId: 158.98
+HostId: 80.0
+
+r) 219.21.56.0
+Clase C
+255.255.255.0
+NetId: 219.21.56
+HostId: 0
+
+s) 222.2.2.2
+Clase C
+255.255.255.0
+NetId: 222.2.2
+HostId: 2
+

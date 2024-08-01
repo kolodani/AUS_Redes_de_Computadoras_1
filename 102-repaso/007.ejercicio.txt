@@ -1,0 +1,191 @@
+7) Dada las siguientes direcciones a subnetear o subneteadas se le solicita que determine
+la clase,
+numero de bits tomados de la porcion hostid,
+numero total de subredes obtenidas,
+numero de direcciones de hosts disponibles y
+luego conteste las siguientes preguntas
+¿Cual es el rango de IPs de la subred W?
+¿Cual es el numero de subred de la subred X?
+¿Cual es la direccion de broadcast para la subred Y
+¿Cuales son las direcciones de hosts de la subred Z?
+
+a) 192.10.10.0 en 14 subredes, W=3, X=7, Y=12, Z=8
+la clase: C
+numero de bits tomados de la porcion hostid: 4 bits
+numero total de subredes obtenidas: 16
+numero de direcciones de hosts disponibles: 224
+¿Cual es el rango de IPs de la subred W?: 192.10.10.32 - 192.10.10.47
+¿Cual es el numero de subred de la subred X?: 192.10.10.96
+¿Cual es la direccion de broadcast para la subred Y: 192.10.10.191
+¿Cuales son las direcciones de hosts de la subred Z?: 192.10.10.113 - 192.10.10.126
+
+b) 165.100.0.0 en 1000 subredes, W=14, X=5, Y=5, Z=8
+la clase: B
+numero de bits tomados de la porcion hostid: 10
+numero total de subredes obtenidas: 1024
+numero de direcciones de hosts disponibles: 63.488
+¿Cual es el rango de IPs de la subred W? 165.100.52.0 - 165.10.55.255
+¿Cual es el numero de subred de la subred X?: 165.10.16.0
+¿Cual es la direccion de broadcast para la subred Y: 165.10.19.255
+¿Cuales son las direcciones de hosts de la subred Z?: 165.10.28.1 - 165.10.31.255
+
+c) 195.223.50.0 en una subred, W=2, X=1, Y=1, Z=2
+la clase: C
+numero de bits tomados de la porcion hostid: 7
+numero total de subredes obtenidas: 2
+numero de direcciones de hosts disponibles: 252
+¿Cual es el rango de IPs de la subred W?: 195.223.50.128 - 195.223.50.255
+¿Cual es el numero de subred de la subred X?: 195.223.50.0
+¿Cual es la direccion de broadcast para la subred Y: 195.223.50.127
+¿Cuales son las direcciones de hosts de la subred Z?: 195.223.50.129 - 195.223.50.254
+
+d) 190.35.0.0 en 750 subredes, W=14, X=12, Y=9, Z=5
+la clase: B
+numero de bits tomados de la porcion hostid: 10
+numero total de subredes obtenidas: 1024
+numero de direcciones de hosts disponibles: 63.486
+¿Cual es el rango de IPs de la subred W?: 190.35.52.0 - 190.35.55.255
+¿Cual es el numero de subred de la subred X?: 190.35.44.0
+¿Cual es la direccion de broadcast para la subred Y: 190.35.35.255
+¿Cuales son las direcciones de hosts de la subred Z?: 190.35.16.1 - 190.35.19.254
+
+e) 193.42.1.1 en subredes con un mínimo de 6 hosts, W=1, X=4, Y=6, Z=9
+la clase: C
+numero de bits tomados de la porcion hostid: 3
+numero total de subredes obtenidas: 32
+numero de direcciones de hosts disponibles y: 192
+¿Cual es el rango de IPs de la subred W?: 193.42.1.0 - 193.42.1.7
+¿Cual es el numero de subred de la subred X?: 193.42.1.24
+¿Cual es la direccion de broadcast para la subred Y: 193.42.1.47
+¿Cuales son las direcciones de hosts de la subred Z?: 193.42.1.73 - 193.42.1.78
+
+f) 192.70.10.0 en 10 subredes, W=8, X=3, Y=11, Z=9
+la clase: C
+numero de bits tomados de la porcion hostid: 4
+numero total de subredes obtenidas: 16
+numero de direcciones de hosts disponibles: 224
+¿Cual es el rango de IPs de la subred W?: 192.70.10.98 - 192.70.10.113
+¿Cual es el numero de subred de la subred X?: 192.70.10.32
+¿Cual es la direccion de broadcast para la subred Y: 192.70.10.175
+¿Cuales son las direcciones de hosts de la subred Z?: 192.70.10.129 - 192.70.10.143
+
+g) 10.0.0.0/16, W=10, X=5, Y=1, Z=200
+la clase: A
+numero de bits tomados de la porcion hostid: 8
+numero total de subredes obtenidas: 256
+numero de direcciones de hosts disponibles: 65.024
+¿Cual es el rango de IPs de la subred W?: 10.0.9.0 - 10.0.9.255
+¿Cual es el numero de subred de la subred X?: 10.0.4.0
+¿Cual es la direccion de broadcast para la subred Y: 10.0.0.255
+¿Cuales son las direcciones de hosts de la subred Z?: 10.0.199.1 - 10.0.199.254
+
+h) 172.50.0.0 en 4 subredes, W=3, X=2, Y=2, Z=4
+la clase: B
+numero de bits tomados de la porcion hostid: 14
+numero total de subredes obtenidas: 4
+numero de direcciones de hosts disponibles: 65.528
+¿Cual es el rango de IPs de la subred W?: 172.50.128.0 - 172.50.191.255
+¿Cual es el numero de subred de la subred X?: 172.50.64.0
+¿Cual es la direccion de broadcast para la subred Y: 172.50.127.255
+¿Cuales son las direcciones de hosts de la subred Z?: 172.50.192.1 - 172.50.255.254
+
+i) 172.50.0.0 en subredes con un mínimo de 28 hosts, W=1, X=9, Y=3, Z=5
+la clase: B
+numero de bits tomados de la porcion hostid: 5
+numero total de subredes obtenidas: 2.048
+numero de direcciones de hosts disponibles: 61.440
+¿Cual es el rango de IPs de la subred W?: 172.50.0.0 - 172.50.0.31
+¿Cual es el numero de subred de la subred X?: 172.50.1.0
+¿Cual es la direccion de broadcast para la subred Y: 172.50.0.95
+¿Cuales son las direcciones de hosts de la subred Z?: 172.50.0.129 - 172.50.0.158
+
+j) 220.100.100.0 en 45 subredes, W=4, X=3, Y=30, Z=64
+la clase: C
+numero de bits tomados de la porcion hostid: 2
+numero total de subredes obtenidas: 64
+numero de direcciones de hosts disponibles: 128
+¿Cual es el rango de IPs de la subred W?: 220.100.100.12 - 220.100.100.15
+¿Cual es el numero de subred de la subred X?: 220.100.100.8
+¿Cual es la direccion de broadcast para la subred Y: 220.100.100.119
+¿Cuales son las direcciones de hosts de la subred Z?: 220.100.100.253 - 220.100.100.254
+
+k) 135.70.0.0 en 8000 subredes, W=5, X=6, Y=2, Z=4
+la clase: B
+numero de bits tomados de la porcion hostid: 3
+numero total de subredes obtenidas: 8.192
+numero de direcciones de hosts disponibles: 49.152
+¿Cual es el rango de IPs de la subred W?: 135.70.0.32 - 135.70.0.39
+¿Cual es el numero de subred de la subred X?: 135.70.0.40
+¿Cual es la direccion de broadcast para la subred Y: 135.70.0.15
+¿Cuales son las direcciones de hosts de la subred Z?: 135.70.0.25 - 135.70.0.30
+
+l) 198.125.50.0 en subredes con un mínimo de 120 hosts, W=1, X=1, Y=2, Z=2
+la clase: C
+numero de bits tomados de la porcion hostid: 7
+numero total de subredes obtenidas: 2
+numero de direcciones de hosts disponibles: 252
+¿Cual es el rango de IPs de la subred W?: 198.125.50.0 - 198.125.50.127
+¿Cual es el numero de subred de la subred X?: 198.125.50.0
+¿Cual es la direccion de broadcast para la subred Y: 198.125.50.255
+¿Cuales son las direcciones de hosts de la subred Z?: 198.125.50.129 - 198.125.50.254
+
+m) 165.200.0.0/26, W=9, X=10, Y=1022, Z=1021
+la clase: B
+numero de bits tomados de la porcion hostid: 6
+numero total de subredes obtenidas: 1024
+numero de direcciones de hosts disponibles: 63.488
+¿Cual es el rango de IPs de la subred W?: 165.200.2.0 - 165.200.2.63
+¿Cual es el numero de subred de la subred X?: 165.200.2.64
+¿Cual es la direccion de broadcast para la subred Y: 165.200.255.128
+¿Cuales son las direcciones de hosts de la subred Z?: 165.200.255.1 - 165.200.255.62
+
+n) 200.10.10.0 en subredes con un mínimo de 16 hosts, W=6, X=4, Y=3, Z=7
+la clase: C
+numero de bits tomados de la porcion hostid: 4
+numero total de subredes obtenidas: 16
+numero de direcciones de hosts disponibles: 224
+¿Cual es el rango de IPs de la subred W?: 200.10.10.80 - 200.10.10.95
+¿Cual es el numero de subred de la subred X?: 200.10.10.48
+¿Cual es la direccion de broadcast para la subred Y: 200.10.10.47
+¿Cuales son las direcciones de hosts de la subred Z?: 200.10.10.97 - 200.10.10.110
+
+ñ) 93.0.0.0/19, W=14, X=1, Y=1000, Z=256
+la clase: A
+numero de bits tomados de la porcion hostid: 13
+numero total de subredes obtenidas: 2048
+numero de direcciones de hosts disponibles: 16.777.216
+¿Cual es el rango de IPs de la subred W?: 93.1.160.0 - 93.1.191.255
+¿Cual es el numero de subred de la subred X?: 93.0.0.0
+¿Cual es la direccion de broadcast para la subred Y: 93.124.255.255
+¿Cuales son las direcciones de hosts de la subred Z?: 93.31.224.1 - 93.31.255.254
+
+o) 148.75.0.0/24, W=1, X=256, Y=256, Z=1
+la clase: B
+numero de bits tomados de la porcion hostid: 8
+numero total de subredes obtenidas: 256
+numero de direcciones de hosts disponibles: 65.024
+¿Cual es el rango de IPs de la subred W? 148.75.0.0 - 148.75.0.255
+¿Cual es el numero de subred de la subred X? 148.75.255.0
+¿Cual es la direccion de broadcast para la subred Y 148.75.255.255
+¿Cuales son las direcciones de hosts de la subred Z? 148.75.0.1 - 148.75.0.254
+
+p) 210.100.56.128/25 en 7 subredes, W=1, X=1, Y=8, Z=3
+la clase: C
+numero de bits tomados de la porcion hostid: 4
+numero total de subredes obtenidas: 8
+numero de direcciones de hosts disponibles: 112
+¿Cual es el rango de IPs de la subred W?: 210.100.56.128 - 210.100.56.143
+¿Cual es el numero de subred de la subred X?: 210.100.56.128
+¿Cual es la direccion de broadcast para la subred Y: 210.100.56.255
+¿Cuales son las direcciones de hosts de la subred Z?: 210.100.56.145 - 210.100.56.150
+
+q) 195.85.8.0 en subredes con un mínimo de 1 hosts, W=6, X=4, Y=3, Z=7
+la clase: C
+numero de bits tomados de la porcion hostid: 2
+numero total de subredes obtenidas: 64
+numero de direcciones de hosts disponibles: 128
+¿Cual es el rango de IPs de la subred W?: 195.85.8.20 - 195.85.8.23
+¿Cual es el numero de subred de la subred X?: 195.85.8.12
+¿Cual es la direccion de broadcast para la subred Y: 195.85.8.11
+¿Cuales son las direcciones de hosts de la subred Z?: 195.85.8.25 - 195.85.8.26
+

@@ -1,0 +1,65 @@
+10) Determine si las siguientes direcciones IP con sus mascaras de red, son direcciones validas de hosts.
+    De serlo determine a que red perteneces en notacion CIDR y cual es la direccion de broadcast y
+    de no serlo explique el porque:
+
+a) 0.230.190.192 - 255.0.0.0
+direccion valida de host
+la direccion es la 0.230.190.192/8
+la direccion de broadcast es 0.255.255.255
+
+b) 192.10.10.1 - 255.255.255.0
+direccion valida de host
+la direccion es la 192.10.10.1/24
+la direccion de broadcast es 192.10.10.255
+
+c) 245.150.190.10 - 255.255.255.0
+direccion no es valida de host
+no es valida porque es una clase D
+
+d) 135.70.191.255 - 255.255.254.0
+direccion no es valida de host
+no es valida porque es la direccion de broadcast
+
+e) 127.100.100.10 - 255.0.0.0
+direccion valida de host
+la direccion es la 127.100.100.10/8
+la direccion de broadcast es 127.255.255.255
+
+f) 93.0.128.1 - 255.255.224.0
+direccion valida de host
+la direccion es la 93.0.128.1/19
+la direccion de broadcast es 93.0.159.255
+
+g) 200.10.10.128 - 255.255.255.224
+direccion no es valida de host
+la direccion es la direccion de la subred
+
+h) 0.100.255.189 - 255.255.255.192
+direccion valida de host
+la direccion es la 0.100.255.189/26
+la direccion de broadcast es 0.100.255.191
+
+i) 190.35.0.10 - 255.255.255.192
+direccion valida de host
+la direccion es la 190.35.0.10/26
+la direccion de broadcast es 190.35.0.63
+
+j) 218.35.50.195 - 255.255.0.0
+direccion valida de host
+la direccion es la 218.35.50.195/16
+la direccion de broadcast es 218.35.255.255
+
+k) 200.10.10.175/22
+direccion valida de host
+la direccion es la 200.10.10.175/22
+la direccion de broadcast es 20.10.11.255
+
+l) 135.70.255.255 - 255.255.224.0
+direccion no valida como host
+la direccion es de broadcast
+
+m) 132.70.2.255 - 255.255.240.0
+direccion valida de host
+la direccion es la 132.70.2.255/20
+la direccion de broadcast es 132.70.15.255
+

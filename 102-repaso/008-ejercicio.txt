@@ -1,0 +1,18 @@
+8) Dada la subred 201.154.10.0 con mascara 255.255.255.224 subdividala en
+subredes de 12 hosts como minimo y obtenga el host 4, 7, 9 de la 1ra subred y
+el host 3, 8, 11 de la 2da subred.
+
+- al empezar con 201, la red es de clase C
+- al ser de clase C, tiene 256 direcciones
+- la mascara 255.255.255.224, divide a la red en 8 subredes de 32 direcciones
+- si la divido de nuevo obtengo 2 subredes de 16 direcciones y 14 host
+- La primera red va a ser de 201.154.10.0 a 201.154.10.15
+- La segunda red va a ser de 201.154.10.16 a 201.154.10.31
+- La subred 1:
+    host 4: 201.154.10.4
+    host 7: 201.154.10.7
+    host 9: 201.154.10.9
+- La subred 2:
+    host 3: 201.154.10.19
+    host 8: 201.154.10.24
+    host 11: 201.154.10.27

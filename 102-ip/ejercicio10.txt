@@ -1,0 +1,19 @@
+10. Determine si las siguientes direcciones IP con sus  máscaras de red, son
+direcciones válidas de hosts. De serlo determine a que red perteneces en
+notación CIDR y cuál es su dirección de broadcast y de no serlo explique el
+porqué:
+
+a) 1.230.190.192 - 255.0.0.0
+Direccion valida para host
+red a la que pertenece: 1.0.0.0/8
+direccion de broadcast: 1.255.255.255
+
+b) 135.70.191.255 - 255.255.254.0
+Direccion no valida para host
+red a la que pertenece: 135.70.190.0/23
+no es una direccion valida de host porque es la direccion de broadcast
+
+c) 200.10.10.128 - 255.255.255.224
+Direccion no valida para host
+red a la que pertenece: 200.10.10.128/27
+no es una direccion valida de host porque es la direccion de la subred

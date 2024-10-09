@@ -1,0 +1,18 @@
+5. Usando los bits obtenidos en el punto anterior proporcione según corresponda
+la dirección IP de red y/o broadcast correspondiente y en caso de ser una
+dirección de host determine en decimal cuál es su orden .
+
+a) 10.250.1.1
+direccion de red: 10.0.0.0
+direccion de broadcast: 10.255.255.255
+Orden decimal: 16.384.257
+
+b) 150.10.15.0
+direccion de red: 150.10.0.0
+direccion de broadcast: 150.10.255.255
+Orden decimal: 3.840
+
+c) 192.14.2.0
+direccion de red: 192.14.2.0
+direccion de broadcast: 192.14.2.255
+Orden decimal: 0

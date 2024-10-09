@@ -1,0 +1,23 @@
+4. Determine los bits del netid y hostid de las direcciones IP anteriores.
+
+a) 10.250.1.1
+00001010.11111010.00000001.00000001
+CLASE A
+Mascara por defecto: 255.0.0.0
+netid: 10
+hostid: 250.1.1
+
+b) 150.10.15.0
+10010110.00001010.00001111.00000000
+CLASE B
+Mascara por defecto: 255.255.0.0
+netid: 150.10
+hostid: 15.0
+
+c) 192.14.2.0
+11000000.00001110.00000010.00000000
+CLASE C
+Mascara por defecto: 255.255.255.0
+netid: 192.14.2
+hostid: 0
+

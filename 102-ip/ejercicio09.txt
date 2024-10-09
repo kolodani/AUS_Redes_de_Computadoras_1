@@ -1,0 +1,14 @@
+9. Su red utiliza la dirección IP 172.30.0.0/16. Inicialmente existen 25
+subredes con un mínimo de 1000 hosts por subred. Se proyecta un crecimiento en
+los próximos años de un total de 55 subredes. ¿Qué máscara de subred se deberá
+utilizar? Responda usando QDN.
+
+inicialmente si cada red tiene que tener un minimo de 1000 hosts, dividiremos
+la red hasta tener 1024 hosts por subred
+al ser una red de clase B con una mascara de 255.255.0.0
+nos da una cantidad de: 65.536 direcciones en total
+si hacemos subredes de 1024 hosts cada uno, nos da un total de 64 subredes
+solucionando nuestro problema. la mascara que necesitariamos seria:
+255.255.252.0
+y nos quedaria:
+172.30.0.0/22

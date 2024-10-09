@@ -1,0 +1,39 @@
+7. Dada las siguientes direcciones a subnetear o subneteadas se le solicita que
+determine la clase, número de bits tomados de la porción hostid, número total de
+subredes obtenidas, número de direcciones de hosts disponibles y luego conteste
+las siguientes preguntas
+¿cúal es el rango de IPs de la subred W?
+¿Cuál es el número de subred de la subred X?
+¿Cuál es la dirección de broadcast para la subred Y?
+¿Cuáles son las direcciones de hosts de la subred Z?
+
+a) 192.10.10.0 en 14 subredes, W=3, X=7, Y=12, Z=8
+CLASE C
+número de bits de hostid: 4
+número de subredes obtenidas: 16
+número de direcciones de hosts disponibles: 224
+rango de IPs de la subred W: 192.10.10.32 - 192.10.10.47
+número de subred de la subred X: 192.10.10.96
+dirección de broadcast para la subred Y: 192.10.10.191
+direcciones de hosts de la subred Z: 192.10.10.113 - 192.10.10.126
+
+b) 165.100.0.0 en 1000 subredes, W=14, X=5, Y=5, Z=8
+CLASE B
+número de bits de hostid: 6
+número de subredes obtenidas: 1024
+número de direcciones de hosts disponibles: 63.488
+rango de IPs de la subred W: 165.100.3.64 - 165.100.3.127
+número de subred de la subred X: 165.100.1.0
+dirección de broadcast para la subred Y: 165.100.1.63
+direcciones de hosts de la subred Z: 165.100.1.193 - 165.100.1.254
+
+c) 10.0.0.0/16, W=10, X=5, Y=1, Z=200
+CLASE A
+número de bits de hostid: 16
+número de subredes obtenidas: 256
+número de direcciones de hosts disponibles: 16.776.704
+rango de IPs de la subred W: 10.9.0.0 - 10.9.255.255
+número de subred de la subred X: 10.4.0.0
+dirección de broadcast para la subred Y: 10.0.255.255
+direcciones de hosts de la subred Z: 10.199.0.1 -10.199.255.254
+

@@ -1,0 +1,14 @@
+11. De la siguiente lista de direcciones IP
+a) 172.16.66.24,
+b) 172.16.65.33,
+c) 172.16.64.42,
+d) 172.16.63.51
+¿Cuáles no pertenece a la misma subred si se ha utilizado la máscara
+255.255.224.0?
+la mascara 255.255.224.0 es igual a /19
+lo que significa que las redes van de los rangos:
+172.16.0.0 - 172.16.31.255
+172.16.32.0 - 172.16.63.255
+172.16.64.0 - 172.16.95.255
+en conclusion, el host 172.16.63.51, no pertenece a la misma subred que el resto
+

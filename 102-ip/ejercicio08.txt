@@ -1,0 +1,18 @@
+8. Dada la subred 201.154.10.0 con máscara 255.255.255.224 subdivídala en
+subredes de 12 hosts como mínimo y obtenga el host 4, 7, 9 de la 1ra subred y el
+host 3, 8, 11 de la 2da subred.
+
+201.154.10.0/27
+la red sin subdividir tiene 32 direcciones
+la subdivido en 2 subredes de 16 direcciones cada una
+subred 1: 201.154.10.0 - 201.154.10.15
+subred 2: 201.154.10.16 - 201.154.10.31
+hosts de la subred 1:
+host 4: 201.154.10.4
+host 7: 201.154.10.7
+host 9: 201.154.10.9
+hosts de la subred 2:
+host 3: 201.154.10.19
+host 8: 201.154.10.24
+host 11: 201.154.10.27
+

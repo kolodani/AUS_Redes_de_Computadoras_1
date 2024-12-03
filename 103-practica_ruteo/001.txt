@@ -1,0 +1,11 @@
+1.Dada la siguiente dirección IP: 135.58.9.23/24 determine:
+    a. ¿A qué clase pertenece?
+    b. ¿Se implementan subredes (SI/NO) y por qué?
+
+la red por ser 135 al comienzo deberia ser una clase B
+pero al llevar un /24 es una red mas pequeña porque tiene una mascara
+la cual es 255.255.255.0
+lo que la reduce de una direccion con 65.536 direcciones a una de 256 direcciones
+se esta implementando subredes, si, por la aplicacion de la mascara, se
+puede inferir que se hizo una sub red con direccion 135.58.9.0
+y boadcast 135.58.9.255

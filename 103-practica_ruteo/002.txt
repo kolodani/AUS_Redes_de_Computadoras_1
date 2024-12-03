@@ -1,0 +1,13 @@
+2. Dada la siguiente dirección IP: 100.8.15.45/20 determine:
+    a. ¿A qué clase pertenece?
+    b. ¿Qué máscara de subred se debe configurar en el puesto de trabajo en notación x.x.x.x?
+    c. ¿A qué subred pertenece esa dirección IP?
+    d. ¿Cuál sería la dirección de broadcast si se desea que un paquete llegue a todas las PC de esa subred?
+
+a. la clase a la que pertenece la red es la clase A
+
+b. la mascara sera 255.255.240.0
+
+c. la direccion partenece a la sub red 100.8.0.0/20
+
+d. la direccion de broadcast es 100.8.15.255/20

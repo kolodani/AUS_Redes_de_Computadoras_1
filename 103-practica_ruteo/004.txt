@@ -1,0 +1,27 @@
+4. Utilizando VLSM determine las máscaras y datos asociados a cada subred, para el número de hosts solicitados en cada caso en la figura a continuación:
+
+se piden mascaras para los siguientes hosts:
+63
+31
+15
+2
+2
+si no nos olvidamos de que por cada subred tenemos que sumar dos direcciones
+mas que son la de red y la de broadcast. nos queda algo asi:
+63 + 2 = 65
+31 + 2 = 33
+15 + 2 = 17
+2  + 2 = 4
+2  + 2 = 4
+por lo que tendriamos que usar
+128
+64
+32
+4
+4
+por ultimo nos quedarian las mascaras de cada uno asi
+63 /25
+31 /26
+15 /27
+2  /30
+2  /30

@@ -1,0 +1,22 @@
+8.  Usted está configurando una subred de la oficina central de los supemercados “La Ocasión”.
+    Necesita asignar direcciones IP de hosts de la subred. Definió la máscara 255.255.255.224.
+    ¿Cuáles de las siguienes direcciones son válidas?
+
+a.15.234.118.63
+b.92.11.178.93
+c.134.178.18.56
+d.192.168.16.87
+e.201.45.116.159
+f.217.63.12.192
+
+primero la mascara es 255.255.255.224 es igual a /27
+las redes con esta mascara tiene 32 direcciones
+las direcciones para ser validas no tienen que ser ni de direccion de red ni de broadcast
+
+a.15.234.118.63   NO (broadcast)
+b.92.11.178.93    SI
+c.134.178.18.56   SI
+d.192.168.16.87   SI
+e.201.45.116.159  NO (broadcast)
+f.217.63.12.192   NO (direccion de red)
+

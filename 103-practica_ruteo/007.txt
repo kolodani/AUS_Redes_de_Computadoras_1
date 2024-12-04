@@ -1,0 +1,34 @@
+7.  En el gráfico se observa una representación de la red del rectorado de la Universidad de
+    Whilestone. Elija entre las opciones dadas las que correspondan a direcciones broadcast.
+
+a. 172.16.32.255
+b. 172.16.47.255
+c. 172.16.64.255
+d. 172.16.82.255
+e. 172.16.79.255
+f. 172.16.95.255
+
+las tres redes son:
+172.16.32.0/20
+172.16.64.0/20
+172.16.82.90/20
+
+primero las mascadas /20 son iguales a 255.255.240.0
+lo que hace que la red se divida en los siguientes subredes
+172.16.0.0/20  - 172.16.15.255/20
+172.16.16.0/20 - 172.16.31.255/20
+172.16.32.0/20 - 172.16.47.255/20
+172.16.48.0/20 - 172.16.63.255/20
+172.16.64.0/20 - 172.16.79.255/20
+172.16.80.0/20 - 172.16.95.255/20
+172.16.96.0/20 - 172.16.111.255/20
+
+con lo que hemos remarcado de los rangos listaremos cual es y no es broadcast
+
+a. 172.16.32.255  NO
+b. 172.16.47.255  SI (172.16.32.0/20)
+c. 172.16.64.255  NO
+d. 172.16.82.255  NO
+e. 172.16.79.255  SI (172.16.64.0/20)
+f. 172.16.95.255  SI (172.16.82.90/20)
+

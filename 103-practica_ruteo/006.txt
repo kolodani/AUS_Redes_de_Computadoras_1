@@ -1,0 +1,231 @@
+6.  Aprovechando las características CIDR, dado en cada caso un conjunto de redes determine la configuración
+    necesaria para disponer de los hosts solicitados en las interface según las figuras:
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+a. 199.40.32.0/24, 199.40.33.0/24, 199.40.34.0/24, 199.40.35.0/24
+
+tenemos en total para asignar en cantidad de hosts
+400
+127
+63
+31
+2
+2
+2
+sumando la direccion de red y broadcast nos quedan
+400 + 2 = 402
+127 + 2 = 129
+63  + 2 = 65
+31  + 2 = 33
+2   + 2 = 4
+2   + 2 = 4
+2   + 2 = 4
+  - empecemos con las 402 direcciones
+    tomaremos la 199.40.32.0/24 y 199.40.33.0/24
+    y lo llevaremos a 199.40.32.0/23.
+    la direccion de red es 199.40.32.0/23
+    la de broadcast es 199.40.33.255/23
+    y el rango es 199.40.32.1/23 - 199.40.33.254/23
+    con 510 hosts disponibles
+
+  - seguimos con las 129 direcciones
+    tomaremos la 199.40.34.0/24 y no la dividiremos, la dejaremos completa para esta red
+    tendra la direccion de red 199.40.34.0/24
+    el broadcast de la red es 199.40.34.255/24
+    y el rango es de 199.40.34.1/24 - 199.40.34.254/24
+    con 254 hosts disponibles
+
+la ultima red la dividiremos en varias partes
+primero
+  - las 63 direcciones
+    la direccion de red sera 199.40.35.0/25
+    la de broadcast sera 199.40.35.127/25
+    y el rango 199.40.35.1/25 - 199.40.35.126/25
+    con 126 hosts disponibles
+    segundo
+  - las 33 direcciones
+    la direccion de red sera 199.40.35.128/26
+    la de broadcast sera 199.40.35.191/26
+    y el rango 199.40.35.129/26 - 199.40.35.190/26
+    con 62 hosts disponibles
+  - y por ultimo las 3 de 4 direcciones
+  1.la direccion de red sera 199.40.35.192/30
+    la de broadcast sera 199.40.35.195/30
+    y el rango 199.40.35.193/30 - 199.40.35.194/30
+    con 2 host disponibles
+  2.la direccion de red sera 199.40.35.196/30
+    la de broadcast sera 199.40.35.199/30
+    y el rango 199.40.35.197/30 - 199.40.35.198/30
+    con 2 host disponibles
+  3.la direccion de red sera 199.40.35.200/30
+    la de broadcast sera 199.40.35.203/30
+    y el rango 199.40.35.201/30 - 199.40.35.202/30
+    con 2 host disponibles
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+b. 197.28.36.0/24, 197.28.37.0/24, 197.28.38.0/24, 197.28.39.0/24, 197.28.40.0/24
+
+tenemos en total para asignar en cantidad de hosts
+615
+39
+29
+2
+2
+sumando la direccion de red y broadcast nos quedan
+615 + 2 = 617
+39  + 2 = 41
+29  + 2 = 31
+2   + 2 = 4
+2   + 2 = 4
+
+  - las 615 direcciones
+    para esta usaremos 4 subredes para poder direccionar solo con la mascara
+    197.28.36.0/24, 197.28.37.0/24, 197.28.38.0/24, 197.28.39.0/24
+    pasan a ser 197.28.36.0/22
+    con direccion de red 197.28.36.0/22
+    de broadcast 197.28.39.255/22
+    con un rango de 197.28.36.1/22 - 197.28.39.254/22
+    con 1022 hosts disponibles
+
+ahora dividiremos en subredes a la red 197.28.40.0/24
+primero:
+  - las 41 direcciones
+    la direccion de red 197.28.40.0/26
+    y la de broadcast 197.28.40.63/26
+    con un rango de 197.28.40.1/26 - 197.28.40.62/26
+    con 62 hosts disponibles
+  - las 31 direcciones
+    la direccion de red 197.28.40.64/27
+    y la de broadcast 197.28.40.95/27
+    con un rango de 197.28.40.65/27 - 197.28.40.94/27
+    con 30 hosts disponibles
+  - y por ultimo las 2 de 4 direcciones
+  1.la direccion de red sera 197.28.40.96/30
+    la de broadcast sera 197.28.40.99/30
+    y el rango 197.28.40.97/30 - 197.28.40.98/30
+    con 2 host disponibles
+  2.la direccion de red sera 197.28.40.100/30
+    la de broadcast sera 197.28.40.103/30
+    y el rango 197.28.40.101/30 - 197.28.40.102/30
+    con 2 host disponibles
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+c. 196.21.40.0/24, 196.21.41.0/24, 196.21.42.0/24, 196.21.43.0/24, 196.21.44.0/24
+
+este escenario es mas complejo, iremos por routers primero
+Router A:
+    tenemos separados los hosts:
+    69
+    59
+    48
+    y direcciones son:
+    69 + 2 = 71
+    59 + 2 = 61
+    48 + 2 = 50
+    usaremos para este router la red 196.21.40.0/24
+  - las 71 direcciones
+    con direccion de red 196.21.40.0/25
+    de broadcast 196.21.40.127/25
+    y el rango 196.21.40.1/25 - 196.21.40.126/25
+  - las 61 direcciones
+    con direccion de red 196.21.40.128/26
+    de broadcast 196.21.40.191/26
+    y el rango 196.21.40.129/26 - 196.21.40.190/26
+  - las 50 direcciones
+    con direccion de red 196.21.40.192/26
+    de broadcast 196.21.40.255/26
+    y el rango 196.21.40.193/26 - 196.21.40.254/26
+
+Router B:
+    tenemos separados los hosts:
+    59
+    28
+    15
+    y direcciones son:
+    59 + 2 = 61
+    28 + 2 = 31
+    15 + 2 = 17
+    usaremos para este router la red 196.21.41.0/24
+  - las 61 direcciones
+    con direccion de red 196.21.41.0/26
+    de broadcast 196.21.41.63/26
+    y el rango 196.21.41.1/26 - 196.21.41.63/26
+  - las 28 direcciones
+    con direccion de red 196.21.41.64/27
+    de broadcast 196.21.41.95/27
+    y el rango 196.21.41.65/27 - 196.21.41.94/27
+  - las 17 direcciones
+    con direccion de red 196.21.41.96/27
+    de broadcast 196.21.41.127/27
+    y el rango 196.21.41.97/27 - 196.21.41.126/27
+
+Router C:
+    tenemos separados los hosts:
+    63
+    38
+    33
+    y direcciones son:
+    63 + 2 = 65
+    38 + 2 = 40
+    33 + 2 = 35
+    usaremos para este router la red 196.21.42.0/24
+  - las 65 direcciones
+    con direccion de red 196.21.42.0/25
+    de broadcast 196.21.42.127/25
+    y el rango 196.21.42.1/25 - 196.21.42.126/25
+  - las 40 direcciones
+    con direccion de red 196.21.42.128/26
+    de broadcast 196.21.42.191/26
+    y el rango 196.21.42.129/26 - 196.21.42.190/26
+  - las 35 direcciones
+    con direccion de red 196.21.42.192/26
+    de broadcast 196.21.42.255/26
+    y el rango 196.21.42.193/26 - 196.21.42.255/26
+
+Router D:
+    tenemos separados los hosts:
+    63
+    63
+    y direcciones son:
+    63 + 2 = 65
+    63 + 2 = 65
+    usaremos para este router la red 196.21.43.0/24
+  - las 65 direcciones
+    con direccion de red 196.21.43.0/25
+    de broadcast 196.21.43.127/25
+    y el rango 196.21.43.1/25 - 196.21.43.126/25
+  - las 65 direcciones
+    con direccion de red 196.21.43.128/25
+    de broadcast 196.21.43.255/25
+    y el rango 196.21.43.129/25 - 196.21.43.254/25
+
+ahora las subredes entre routers
+    usaremos para este router la red 196.21.44.0/24
+    - cada una tiene 4 direcciones:
+    A - E:
+        direccion de la red 196.21.44.0/30
+        de broadcast 196.21.44.3/30
+        y el rando es 196.21.44.1/30 - 196.21.44.2/30
+    B - E:
+        direccion de la red 196.21.44.4/30
+        de broadcast 196.21.44.7/30
+        y el rando es 196.21.44.5/30 - 196.21.44.6/30
+    C - F:
+        direccion de la red 196.21.44.8/30
+        de broadcast 196.21.44.11/30
+        y el rando es 196.21.44.9/30 - 196.21.44.10/30
+    D - F:
+        direccion de la red 196.21.44.12/30
+        de broadcast 196.21.44.15/30
+        y el rando es 196.21.44.13/30 - 196.21.44.14/30
+    E - G:
+        direccion de la red 196.21.44.16/30
+        de broadcast 196.21.44.19/30
+        y el rando es 196.21.44.17/30 - 196.21.44.18/30
+    F - G:
+        direccion de la red 196.21.44.20/30
+        de broadcast 196.21.44.23/30
+        y el rando es 196.21.44.21/30 - 196.21.44.22/30

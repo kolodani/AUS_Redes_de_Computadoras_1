@@ -1,0 +1,71 @@
+5.  Para el siguiente gráfico los routers A, B y C administran las redes indicadas.
+    Maximize el número de hosts y la máscara a configurar en los mismos.
+    Determine cuantos y cuales son y las nuevas redes.
+
+Router A:
+las redes son
+200.15.16.0
+200.15.17.0
+200.15.18.0
+200.15.19.0
+son 4 redes con mascara 255.255.255.0
+200.15.16.0/24
+200.15.17.0/24
+200.15.18.0/24
+200.15.19.0/24
+para tomar mas host y unir a todas en la misma red
+cambiariamos a /22 lo que seria 255.255.252.0
+y la direccion de red seria
+200.15.16.0/22
+la de broadcast seria:
+200.15.19.255/22
+y los hosts disponibles
+200.15.16.1/22 - 200.15.19.254/22
+
+Router B:
+las redes son
+200.15.20.0
+200.15.21.0
+200.15.22.0
+200.15.23.0
+son 4 redes con mascara 255.255.255.0
+200.15.20.0/24
+200.15.21.0/24
+200.15.22.0/24
+200.15.23.0/24
+para tomar mas host y unir a todas en la misma red
+cambiariamos a /22 lo que seria 255.255.252.0
+y la direccion de red seria
+200.15.20.0/22
+la de broadcast seria:
+200.15.23.255/22
+y los hosts disponibles
+200.15.20.1/22 - 200.15.23.254/22
+
+Router C:
+las redes son
+200.15.24.0
+200.15.25.0
+200.15.26.0
+200.15.27.0
+200.15.28.0
+200.15.29.0
+200.15.30.0
+200.15.31.0
+son 4 redes con mascara 255.255.255.0
+200.15.24.0/24
+200.15.25.0/24
+200.15.26.0/24
+200.15.27.0/24
+200.15.28.0/24
+200.15.29.0/24
+200.15.30.0/24
+200.15.31.0/24
+para tomar mas host y unir a todas en la misma red
+cambiariamos a /21 lo que seria 255.255.248.0
+y la direccion de red seria
+200.15.24.0/21
+la de broadcast seria:
+200.15.31.255/21
+y los hosts disponibles
+200.15.24.1/22 - 200.15.31.254/22

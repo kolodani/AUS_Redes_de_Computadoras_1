@@ -1,0 +1,11 @@
+9. Usted debe particionar la red 172.12.0.0 en subredes tales que puedan alojar 458 hosts IP y
+además lograr el máximo número de subredes. Determine la máscara a utilizar.
+
+para poder alojar 458 hosts usaremos un mascara para 512 direcciones
+la mascara es /23 o 255.255.254.0
+si usamos /24 tendriamos solo 256 direcciones, que es menor
+y si usamos /22 tendriamos 1024 direcciones, que es mucho mas que lo que necesitamos
+
+la red al ser 172.12.0.0, es una clase B
+al usar la mascara /23, tendremos 128 redes de 512 direcciones cada una.
+o de 510 hosts

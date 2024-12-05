@@ -15,13 +15,458 @@ broadcast ordenados de manera tal que la primera subred se le asigne al grupo de
 con mayor cantidad de hosts hasta llegar a la subnet con la menor cantidad de dispositivos.
 
 a) 172.16.0.0, X=100
+  - En este ejemplo tenemos:
+    Research:   60 hosts
+    Marketing:  24 hosts
+    Management: 15 hosts
+  - Crecimiento del 100%
+    Research:   120 hosts
+    Marketing:  48 hosts
+    Management: 30 hosts
+ademas tenemos la red que une a los dos routers que posee 2 hosts
+vamos a hacer las subredes lo mas pequeñas posibles
+* Research: 120 hosts
+usaremos 128 direcciones,
+direccion de la red: 172.16.0.0/25
+mascara de la red: 255.255.255.128
+broadcast de la red: 172.16.0.127/25
+rango de hosts: 172.16.0.1/25 - 172.16.0.126/25
+* Marketing: 48 hosts
+usaremos 64 direcciones,
+direccion de la red: 172.16.0.128/26
+mascara de la red: 255.255.255.192
+broadcast de la red: 172.16.0.191/26
+rango de hosts: 172.16.0.129/26 - 172.16.0.190/26
+* Management: 30 hosts
+usaremos 32 direcciones,
+direccion de la red: 172.16.0.192/27
+mascara de la red: 255.255.255.224
+broadcast de la red: 172.16.0.223/27
+rango de hosts: 172.16.0.193/27 - 172.16.0.222/27
+* enlace A - B:
+usaremos 4 direcciones
+direccion de la red: 172.16.0.192/30
+mascara de la red: 255.255.255.252
+broadcast de la red: 172.16.0.195/30
+rango de hosts: 172.16.0.193/30 - 172.16.0.194/30
+
 b) 135.126.0.0, X=30
+  - En este ejemplo tenemos:
+    Tech:    20 hosts
+    English: 15 hosts
+    Science: 10 hosts
+  - Crecimiento del 30%
+    Tech:    26 hosts
+    English: 20 hosts
+    Science: 13 hosts
+ademas contamos con 3 router que que estan unidos en A - B y A - C
+* Tech: 26 hosts
+usaremos 32 direcciones
+direccion de la red: 135.126.0.0/27
+mascara de la red: 255.255.255.224
+broadcast de la red: 135.126.0.31/27
+rango de hosts: 135.126.0.1/27 - 135.126.0.30/27
+* English: 20 hosts
+usaremos 32 direcciones
+direccion de la red: 135.126.0.32/27
+mascara de la red: 255.255.255.224
+broadcast de la red: 135.126.0.63/27
+rango de hosts: 135.126.0.33/27 - 135.126.0.62/27
+* Science: 13 hosts
+usaremos 16 direcciones
+direccion de la red: 135.126.0.64/28
+mascara de la red: 255.255.255.240
+broadcast de la red: 135.126.0.79/28
+rango de hosts: 135.126.0.65/28 - 135.126.0.78/28
+* Enlace A - B:
+usaremos 4 direcciones
+direccion de la red: 135.126.0.80/30
+mascara de la red: 255.255.255.252
+broadcast de la red: 135.126.0.83/30
+rango de hosts: 135.126.0.81/30 - 135.126.0.82/30
+* Enlace A - C:
+usaremos 4 direcciones
+direccion de la red: 135.126.0.84/30
+mascara de la red: 255.255.255.252
+broadcast de la red: 135.126.0.87/30
+rango de hosts: 135.126.0.85/30 - 135.126.0.86/30
+
 c) 172.16.0.0, X=25
+  - En este ejemplo tenemos:
+    Sales:          185 hosts
+    Marketing:       50 hosts
+    Administracion:  30 hosts
+  - Crecimiento del 25%:
+    Sales:          232 hosts
+    Marketing:       63 hosts
+    Administracion:  38 hosts
+ademas contamos con 2 router que que estan unidos en A - B
+* Sales: 232 hosts
+usaremos 256 direcciones
+direccion de la red: 172.16.0.0/24
+mascara de la red: 255.255.255.0
+broadcast de la red: 172.16.0.255/24
+rango de hosts: 172.16.0.1/24 - 172.16.0.254/24
+* Marketing: 63 hosts
+usaremos 128 direcciones
+direccion de la red: 172.16.1.0/25
+mascara de la red: 255.255.255.128
+broadcast de la red: 172.16.1.127/25
+rango de hosts: 172.16.1.1/25 - 172.16.1.126/25
+* Administracion: 38 hosts
+usaremos 64 direcciones
+direccion de la red: 172.16.1.128/26
+mascara de la red: 255.255.255.192
+broadcast de la red: 172.16.1.191/26
+rango de hosts: 172.16.1.129/26 - 172.16.1.191/26
+* Enlace A - B:
+usaremos 4 direcciones
+direccion de la red: 172.16.1.192/30
+mascara de la red: 255.255.255.252
+broadcast de la red: 172.16.1.195/30
+rango de hosts: 172.16.1.193/30 - 172.16.1.194/30
+
 d) 135.126.0.0, X=70
+  - En este ejemplo tenemos:
+    New York:   325 hosts
+    Washington: 220 hosts
+    Dallas:     150 hosts
+  - Crecimiento del 70%:
+    New York:   553 hosts
+    Washington: 374 hosts
+    Dallas:     255 hosts
+ademas contamos con 3 router que que estan unidos en A - B y A - C
+* New York: 553 hosts
+usaremos 1024 direcciones
+direccion de la red: 135.126.0.0/22
+mascara de la red: 255.255.252.0
+broadcast de la red: 135.126.3.255/22
+rango de hosts: 135.126.0.1/22 - 135.126.3.254/22
+* Washington: 374 hosts
+usaremos 512 direcciones
+direccion de la red: 135.126.4.0/23
+mascara de la red: 255.255.254.0
+broadcast de la red: 135.126.5.255/23
+rango de hosts: 135.126.4.1/23 - 135.126.5.254/23
+* Dallas: 255 hosts
+usaremos 512 direcciones
+direccion de la red: 135.126.6.0/23
+mascara de la red: 255.255.254.0
+broadcast de la red: 135.126.7.255/23
+rango de hosts: 135.126.6.1/23 - 135.126.7.254/23
+* Enlace A - B:
+usaremos 4 direcciones
+direccion de la red: 135.126.8.0/30
+mascara de la red: 255.255.255.252
+broadcast de la red: 135.126.8.3/30
+rango de hosts: 135.126.8.1/30 - 135.126.8.2/30
+* Enlace A - C:
+usaremos 4 direcciones
+direccion de la red: 135.126.8.4/30
+mascara de la red: 255.255.255.252
+broadcast de la red: 135.126.8.7/30
+rango de hosts: 135.126.8.5/30 - 135.126.8.6/30
+
 e) 210.15.10.0, X=100
+  - En este ejemplo tenemos:
+    Tech:    18 hosts
+    English: 15 hosts
+    Art:     12 hosts
+    Science: 10 hosts
+  - Crecimiento del 100%:
+    Tech:    36 hosts
+    English: 30 hosts
+    Art:     24 hosts
+    Science: 20 hosts
+en este caso tenemos un solo router comunicado a dos redes y en cada red un switch a otra red
+English y Science estan en una salida del router y Tech y Art en la otra
+* Tech: 36 hosts
+usaremos 64 direcciones
+direccion de la red: 210.15.10.0/26
+mascara de la red: 255.255.255.192
+broadcast de la red: 210.15.10.63/26
+rango de hosts: 210.15.10.1/26 - 210.15.10.62/26
+* Art: 24 hosts
+usaremos 32 direcciones
+direccion de la red: 210.15.10.64/27
+mascara de la red: 255.255.255.224
+broadcast de la red: 210.15.10.95/27
+rango de hosts: 210.15.10.65/27 - 210.15.10.94/27
+* English: 30 hosts
+usaremos 64 direcciones
+direccion de la red: 210.15.10.128/26
+mascara de la red: 255.255.255.192
+broadcast de la red: 210.15.10.191/26
+rango de hosts: 210.15.10.129/26 - 210.15.10.190/26
+* Science: 20 hosts
+usaremos 32 direcciones
+direccion de la red: 210.15.10.192/27
+mascara de la red: 255.255.255.224
+broadcast de la red: 210.15.10.223/27
+rango de hosts: 210.15.10.193/27 - 210.15.10.222/27
+en este caso tomo mas grande la red de English ya que se tengo un host mas en el enlace con el router
+lo que hace que sean 31 host en total, y no pueda usar solo 32 direcciones
+
 f) 10.0.0.0, X=20
+  - En este ejemplo tenemos:
+    Tech:           320 hosts
+    Science:        225 hosts
+    Art:             75 hosts
+    Administracion:  35 hosts
+  - Crecimiento del 20%:
+    Tech:           384 hosts
+    Science:        270 hosts
+    Art:             90 hosts
+    Administracion:  42 hosts
+ademas contamos con 3 router que que estan unidos en A - B , A - C y B - C
+* Tech: 384 hosts
+usaremos 512 direcciones
+direccion de la red: 10.0.0.0/23
+mascara de la red: 255.255.254.0
+broadcast de la red: 10.0.1.255/23
+rango de hosts: 10.0.0.1/23 - 10.0.1.254/23
+* Science: 270 hosts
+usaremos 512 direcciones
+direccion de la red: 10.0.2.0/23
+mascara de la red: 255.255.254.0
+broadcast de la red: 10.0.3.255/23
+rango de hosts: 10.0.2.1/23 - 10.0.3.254/23
+* Art: 90 hosts
+usaremos 128 direcciones
+direccion de la red: 10.0.4.0/25
+mascara de la red: 255.255.255.128
+broadcast de la red: 10.0.4.127/25
+rango de hosts: 10.0.4.1/25 - 10.0.4.126/25
+* Administracion: 42 hosts
+usaremos 64 direcciones
+direccion de la red: 10.0.4.128/26
+mascara de la red: 255.255.255.192
+broadcast de la red: 10.0.4.191/26
+rango de hosts: 10.0.4.127/26 - 10.0.4.190/26
+* Enlace A - B:
+usaremos 4 direcciones
+direccion de la red: 10.0.5.0/30
+mascara de la red: 255.255.255.252
+broadcast de la red: 10.0.5.3/30
+rango de hosts: 10.0.5.1/30 - 10.0.5.2/30
+* Enlace A - C:
+usaremos 4 direcciones
+direccion de la red: 10.0.5.4/30
+mascara de la red: 255.255.255.252
+broadcast de la red: 10.0.5.7/30
+rango de hosts: 10.0.5.5/30 - 10.0.5.6/30
+* Enlace B - C:
+usaremos 4 direcciones
+direccion de la red: 10.0.5.8/30
+mascara de la red: 255.255.255.252
+broadcast de la red: 10.0.5.11/30
+rango de hosts: 10.0.5.9/30 - 10.0.5.10/30
+
 g) 177.35.0.0, X=125
+  - En este ejemplo tenemos:
+    Sales B:       255 hosts
+    Sales A:       135 hosts
+    Marketing:      75 hosts
+    Deployment:     63 hosts
+    Administracion: 33 hosts
+  - Crecimiento del 125%:
+    Sales B:        574 hosts
+    Sales A:        304 hosts
+    Marketing:      169 hosts
+    Deployment:     142 hosts
+    Administracion:  75 hosts
+ademas contamos con 2 router que que estan unidos en A - B
+* Sales B: 574 hosts
+usaremos 1024 direcciones
+direccion de la red: 177.35.0.0/22
+mascara de la red: 255.255.252.0
+broadcast de la red: 177.35.3.255/22
+rango de hosts: 177.35.0.1/22 - 177.35.3.254/22
+* Marketing: 169 hosts
+usaremos 256 direcciones
+direccion de la red: 177.35.4.0/24
+mascara de la red: 255.255.255.0
+broadcast de la red: 177.35.4.255/24
+rango de hosts: 177.35.4.1/24 - 177.35.4.254/24
+* Administracion: 75 hosts
+usaremos 128 direcciones
+direccion de la red: 177.35.5.0/25
+mascara de la red: 255.255.255.128
+broadcast de la red: 177.35.5.127/25
+rango de hosts: 177.35.5.1/25 - 177.35.5.126/25
+* Sales A: 304 hosts
+usaremos 512 direcciones
+direccion de la red: 177.35.8.0/23
+mascara de la red: 255.255.254.0
+broadcast de la red: 177.35.9.255/23
+rango de hosts: 177.35.8.1/23 - 177.35.9.254/23
+* Deployment: 142 hosts
+usaremos 256 direcciones
+direccion de la red: 177.35.10.0/24
+mascara de la red: 255.255.255.0
+broadcast de la red: 177.35.10.255/24
+rango de hosts: 177.35.10.1/24 - 177.35.10.254/24
+* Enlace A - B:
+usaremos 4 direcciones
+direccion de la red: 177.35.12.0/30
+mascara de la red: 255.255.255.252
+broadcast de la red: 177.35.12.3/30
+rango de hosts: 177.35.12.1/30 - 177.35.12.2/30
+
 h) 192.168.1.0, X=85
+  - En este ejemplo tenemos:
+    New York: 8 hosts
+    Research: 8 hosts
+    Boston:   5 hosts
+  - Crecimiento del 85%:
+    New York: 15 hosts
+    Research: 15 hosts
+    Boston:   10 hosts
+ademas contamos con 2 router que que estan unidos en A - B
+* New York: 15 hosts
+usaremos 32 direcciones
+direccion de la red: 192.168.1.0/27
+mascara de la red: 255.255.255.224
+broadcast de la red: 192.168.1.31/27
+rango de hosts: 192.168.1.1/27 - 192.168.1.30/27
+* Research: 15 hosts
+usaremos 32 direcciones
+direccion de la red: 192.168.1.32/27
+mascara de la red: 255.255.255.224
+broadcast de la red: 192.168.1.63/27
+rango de hosts: 192.168.1.33/27 - 192.168.1.62/27
+* Boston: 10 hosts
+usaremos 16 direcciones
+direccion de la red: 192.168.1.64/28
+mascara de la red: 255.255.255.240
+broadcast de la red: 192.168.1.79/28
+rango de hosts: 192.168.1.65/28 - 192.168.1.78/28
+* Enlace A - B:
+usaremos 4 direcciones
+direccion de la red: 192.168.1.80/30
+mascara de la red: 255.255.255.252
+broadcast de la red: 192.168.1.83/30
+rango de hosts: 192.168.1.81/30 - 192.168.1.82/30
+
 i) 148.55.0.0, X=15
+  - En este ejemplo tenemos:
+    Ft. Worth: 2300 hosts
+    Dallas:    1500 hosts
+  - Crecimiento del 15%:
+    Ft. Worth: 2645 hosts
+    Dallas:    1725 hosts
+ademas contamos con 4 router que que estan unidos en A - B, A - C y C - D
+* Ft. Worth: 2645 hosts
+usaremos 4096 direcciones
+direccion de la red: 148.55.0.0/20
+mascara de la red: 255.255.240.0
+broadcast de la red: 148.55.15.255/20
+rango de hosts: 148.55.0.1/20 - 148.55.15.255/20
+* Dallas: 1725 hosts
+usaremos 2048 direcciones
+direccion de la red: 148.55.16.0/21
+mascara de la red: 255.255.248.0
+broadcast de la red: 148.55.23.255/21
+rango de hosts: 148.55.16.1/21 - 148.55.23.255/21
+* Enlace A - B:
+usaremos 4 direcciones
+direccion de la red: 148.55.24.0/30
+mascara de la red: 255.255.255.252
+broadcast de la red: 148.55.24.3/30
+rango de hosts: 148.55.24.1/30 - 148.55.24.2/30
+* Enlace A - C:
+usaremos 4 direcciones
+direccion de la red: 148.55.24.4/30
+mascara de la red: 255.255.255.252
+broadcast de la red: 148.55.24.7/30
+rango de hosts: 148.55.24.5/30 - 148.55.24.6/30
+* Enlace C - D:
+usaremos 4 direcciones
+direccion de la red: 148.55.24.8/30
+mascara de la red: 255.255.255.252
+broadcast de la red: 148.55.24.11/30
+rango de hosts: 148.55.24.9/30 - 148.55.24.10/30
+
 j) 172.30.0.0, X=110
+  - En este ejemplo tenemos:
+    Sales:      155 hosts
+    Marketing:   56 hosts
+    Research:    35 hosts
+    Management:  25 hosts
+  - Crecimiento del 110%:
+    Sales:      326 hosts
+    Marketing:  118 hosts
+    Research:    74 hosts
+    Management:  53 hosts
+ademas contamos con 2 router que que estan unidos en A - B
+* Sales: 326 hosts
+usaremos 512 direcciones
+direccion de la red: 172.30.0.0/23
+mascara de la red: 255.255.254.0
+broadcast de la red: 172.30.1.255/23
+rango de hosts: 172.30.0.1/23 - 172.30.1.254/23
+* Management: 53 hosts
+usaremos 64 direcciones
+direccion de la red: 172.30.2.0/26
+mascara de la red: 255.255.255.192
+broadcast de la red: 172.30.2.63/26
+rango de hosts: 172.30.2.1/26 - 172.30.2.62/26
+* Marketing: 118 hosts
+usaremos 128 direcciones
+direccion de la red: 172.30.4.0/25
+mascara de la red: 255.255.255.128
+broadcast de la red: 172.30.4.127/25
+rango de hosts: 172.30.4.1/25 - 172.30.4.126/25
+* Research: 74 hosts
+usaremos 128 direcciones
+direccion de la red: 172.30.4.128/25
+mascara de la red: 255.255.255.128
+broadcast de la red: 172.30.4.255/25
+rango de hosts: 172.30.4.129/25 - 172.30.4.254/25
+* Enlace A - B:
+usaremos 4 direcciones
+direccion de la red: 172.30.5.0/30
+mascara de la red: 255.255.255.252
+broadcast de la red: 172.30.4.3/30
+rango de hosts: 172.30.5.1/30 - 172.30.5.2/30
+
 k) 172.1.4.0/22, X=0
+  - En este ejemplo tenemos:
+    Washington: 62 hosts
+    Dallas:     32 hosts
+    New York:   14 hosts
+  - Crecimiento del 0%:
+    Washington: 62 hosts
+    Dallas:     32 hosts
+    New York:   14 hosts
+ademas contamos con 3 router que que estan unidos en A - B y A - C
+* Washington: 62 hosts
+usaremos 64 direcciones
+direccion de la red: 172.1.4.0/26
+mascara de la red: 255.255.255.192
+broadcast de la red: 172.1.4.63/26
+rango de hosts: 172.1.4.1/26 - 172.1.4.62/26
+* Dallas:     32 hosts
+usaremos 64 direcciones
+direccion de la red: 172.1.4.64/26
+mascara de la red: 255.255.255.192
+broadcast de la red: 172.1.4.127/26
+rango de hosts: 172.1.4.65/26 - 172.1.4.126/26
+* New York:   14 hosts
+usaremos 16 direcciones
+direccion de la red: 172.1.4.128/28
+mascara de la red: 255.255.255.240
+broadcast de la red: 172.1.4.143/28
+rango de hosts: 172.1.4.129/28 - 172.1.4.142/28
+* Enlace A - B:
+usaremos 4 direcciones
+direccion de la red: 172.1.4.144/30
+mascara de la red: 255.255.255.252
+broadcast de la red: 172.1.4.147/30
+rango de hosts: 172.1.4.145/30 - 172.1.4.146/30
+* Enlace A - C:
+usaremos 4 direcciones
+direccion de la red: 172.1.4.148/30
+mascara de la red: 255.255.255.252
+broadcast de la red: 172.1.4.151/30
+rango de hosts: 172.1.4.149/30 - 172.1.4.150/30

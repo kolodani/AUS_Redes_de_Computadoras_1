@@ -242,7 +242,7 @@ usaremos 64 direcciones
 direccion de la red: 10.0.4.128/26
 mascara de la red: 255.255.255.192
 broadcast de la red: 10.0.4.191/26
-rango de hosts: 10.0.4.127/26 - 10.0.4.190/26
+rango de hosts: 10.0.4.129/26 - 10.0.4.190/26
 * Enlace A - B:
 usaremos 4 direcciones
 direccion de la red: 10.0.5.0/30
@@ -427,7 +427,7 @@ rango de hosts: 172.30.4.129/25 - 172.30.4.254/25
 usaremos 4 direcciones
 direccion de la red: 172.30.5.0/30
 mascara de la red: 255.255.255.252
-broadcast de la red: 172.30.4.3/30
+broadcast de la red: 172.30.5.3/30
 rango de hosts: 172.30.5.1/30 - 172.30.5.2/30
 
 k) 172.1.4.0/22, X=0

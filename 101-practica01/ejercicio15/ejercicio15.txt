@@ -1,0 +1,276 @@
+15) Aprovechando las características CIDR con VLSM, dado en cada caso un
+conjunto de redes determine la configuración necesaria para disponer de los
+hosts solicitados en las interface según las figuras y el números de redes
+provistas.
+
+a) 199.40.x.0/24 con x=32..35
+b) 197.28.x.0/24 con x=36..40
+c) 196.21.x.0/24 con x=40..44
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+a) 199.40.x.0/24 con x=32..35
+las redes que disponemos son:
+199.40.32.0/24
+199.40.33.0/24
+199.40.34.0/24
+199.40.35.0/24
+y tenemos los siguientes solicitudes de hosts:
+Sales: 400 hosts
+Research: 126 hosts
+Management: 62 hosts
+Marketing: 30 hosts
+y tenemos los Routers A, B, C y D conectados
+y las conexiones son A - D, B - D Y C -D
+
+* Sales : 400 hosts
+usaremos 512 direcciones
+direccion de la red: 199.40.32.0/23
+mascara de la red: 255.255.254.0
+broadcast de la red: 199.40.33.255/23
+rango de hosts: 199.40.32.1/23 - 199.40.33.254/23
+
+* Research: 126 hosts
+usaremos 128 direcciones
+direccion de la red: 199.40.34.0/25
+mascara de la red: 255.255.255.128
+broadcast de la red: 199.40.34.127/25
+rango de hosts: 199.40.34.1/25 - 199.40.34.126/25
+
+* Management: 62 hosts
+usaremos 64 direcciones
+direccion de la red: 199.40.34.128/26
+mascara de la red: 255.255.255.192
+broadcast de la red: 199.40.34.191/26
+rango de hosts: 199.40.34.129/26 - 199.40.34.190/26
+
+* Marketing: 30 hosts
+usaremos 32 direcciones
+direccion de la red: 199.40.34.192/27
+mascara de la red: 255.255.255.224
+broadcast de la red: 199.40.34.191/27
+rango de hosts: 199.40.34.129/27 - 199.40.34.190/27
+
+* Enlace A - D:
+usaremos 4 direcciones
+direccion de la red: 199.40.35.0/30
+mascara de la red: 255.255.255.252
+broadcast de la red: 199.40.35.3/30
+rango de hosts: 199.40.35.1/30 - 199.40.35.2/30
+
+* Enlace B - D:
+usaremos 4 direcciones
+direccion de la red: 199.40.35.4/30
+mascara de la red: 255.255.255.252
+broadcast de la red: 199.40.35.7/30
+rango de hosts: 199.40.35.5/30 - 199.40.35.6/30
+
+* Enlace C - D:
+usaremos 4 direcciones
+direccion de la red: 199.40.35.8/30
+mascara de la red: 255.255.255.252
+broadcast de la red: 199.40.35.11/30
+rango de hosts: 199.40.35.9/30 - 199.40.35.10/30
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+b) 197.28.x.0/24 con x=36..40
+las redes que disponemos son:
+197.28.36.0/24
+197.28.37.0/24
+197.28.38.0/24
+197.28.39.0/24
+197.28.40.0/24
+y tenemos los siguientes solicitudes de hosts:
+Miami: 614 hosts
+Boston: 39 hosts
+Denver: 29 hosts
+y tenemos los Routers A, B y C conectados
+y las conexiones son A - C y B - C
+
+* Miami: 614 hosts
+usaremos 1024 direcciones
+direccion de la red: 197.28.36.0/22
+mascara de la red: 255.255.252.0
+broadcast de la red: 197.28.39.255/22
+rango de hosts: 197.28.36.1/22 - 197.28.39.254/22
+
+* Boston: 39 hosts
+usaremos 64 direcciones
+direccion de la red: 197.28.40.0/26
+mascara de la red: 255.255.255.192
+broadcast de la red: 197.28.40.63/26
+rango de hosts: 197.28.40.1/26 - 197.28.40.62/26
+
+* Denver: 29 hosts
+usaremos 32 direcciones
+direccion de la red: 197.28.40.64/27
+mascara de la red: 255.255.255.224
+broadcast de la red: 197.28.40.95/27
+rango de hosts: 197.28.40.65/27 - 197.28.40.94/27
+
+* Enlace A - C:
+usaremos 4 direcciones
+direccion de la red: 197.28.40.128/30
+mascara de la red: 255.255.255.252
+broadcast de la red: 197.28.40.131/30
+rango de hosts: 197.28.40.129/30 - 197.28.40.130/30
+
+* Enlace B - C:
+usaremos 4 direcciones
+direccion de la red: 197.28.40.132/30
+mascara de la red: 255.255.255.252
+broadcast de la red: 197.28.40.135/30
+rango de hosts: 197.28.40.133/30 - 197.28.40.134/30
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+c) 196.21.x.0/24 con x=40..44
+las redes que disponemos son:
+196.21.40.0/24
+196.21.41.0/24
+196.21.42.0/24
+196.21.43.0/24
+196.21.44.0/24
+y tenemos los siguientes solicitudes de hosts:
+- Router A:
+    Sales A: 68 hosts
+    Miami: 58 hosts
+    California: 47 hosts
+- Router B:
+    New York: 58 hosts
+    Boston: 27 hosts
+    Sales B: 14 hosts
+- Router C:
+    Denver: 62 hosts
+    Missouri: 37 hosts
+    Sales C: 32 hosts
+- Router D:
+    Ohaio: 62 hosts
+    Sales D: 62 hosts
+y tenemos los Routers A, B, C, D, E, F y G conectados
+y las conexiones son A - E, B - E, C - F, D - F, E - G Y F - G
+
+- Router A:
+    * Sales A: 68 hosts
+    usaremos 128 direcciones
+    direccion de la red: 196.21.40.0/25
+    mascara de la red: 255.255.255.128
+    broadcast de la red: 196.21.40.127/25
+    rango de hosts: 196.21.40.1/25 - 196.21.40.127/25
+
+    * Miami: 58 hosts
+    usaremos 64 direcciones
+    direccion de la red: 196.21.40.128/26
+    mascara de la red: 255.255.255.192
+    broadcast de la red: 196.21.40.191/26
+    rango de hosts: 196.21.40.127/26 - 196.21.40.190/26
+
+    * California: 47 hosts
+    usaremos 64 direcciones
+    direccion de la red: 196.21.40.192/26
+    mascara de la red: 255.255.255.192
+    broadcast de la red: 196.21.40.255/26
+    rango de hosts: 196.21.40.193/26 - 196.21.40.254/26
+
+- Router B:
+    * New York: 58 hosts
+    usaremos 64 direcciones
+    direccion de la red: 196.21.41.0/26
+    mascara de la red: 255.255.255.192
+    broadcast de la red: 196.21.41.63/26
+    rango de hosts: 196.21.41.1/26 - 196.21.41.62/26
+
+    * Boston: 27 hosts
+    usaremos 32 direcciones
+    direccion de la red: 196.21.41.64/27
+    mascara de la red: 255.255.255.224
+    broadcast de la red: 196.21.41.95/27
+    rango de hosts: 196.21.41.65/27 - 196.21.41.94/27
+
+    * Sales B: 14 hosts
+    usaremos 16 direcciones
+    direccion de la red: 196.21.41.96/28
+    mascara de la red: 255.255.255.240
+    broadcast de la red: 196.21.41.111/28
+    rango de hosts: 196.21.41.97/28 - 196.21.41.110/28
+
+- Router C:
+    * Denver: 62 hosts
+    usaremos 64 direcciones
+    direccion de la red: 196.21.42.0/26
+    mascara de la red: 255.255.255.192
+    broadcast de la red: 196.21.42.63/26
+    rango de hosts: 196.21.42.1/26 - 196.21.42.62/26
+
+    * Missouri: 37 hosts
+    usaremos 64 direcciones
+    direccion de la red: 196.21.42.64/26
+    mascara de la red: 255.255.255.192
+    broadcast de la red: 196.21.42.127/26
+    rango de hosts: 196.21.42.65/26 - 196.21.42.126/26
+
+    * Sales C: 32 hosts
+    usaremos 64 direcciones
+    direccion de la red: 196.21.42.128/26
+    mascara de la red: 255.255.255.192
+    broadcast de la red: 196.21.42.191/26
+    rango de hosts: 196.21.42.129/26 - 196.21.42.190/26
+
+- Router D:
+    * Ohaio: 62 hosts
+    usaremos 64 direcciones
+    direccion de la red: 196.21.43.0/26
+    mascara de la red: 255.255.255.192
+    broadcast de la red: 196.21.43.63/26
+    rango de hosts: 196.21.43.1/26 - 196.21.43.62/26
+
+    * Sales D: 62 hosts
+    usaremos 64 direcciones
+    direccion de la red: 196.21.43.64/26
+    mascara de la red: 255.255.255.192
+    broadcast de la red: 196.21.43.127/26
+    rango de hosts: 196.21.43.65/26 - 196.21.43.126/26
+
+* Enlace A - E:
+usaremos 4 direcciones
+direccion de la red: 196.21.44.0/30
+mascara de la red: 255.255.255.252
+broadcast de la red: 196.21.44.3/30
+rango de hosts: 196.21.44.1/30 - 196.21.44.2/30
+
+* Enlace B - E:
+usaremos 4 direcciones
+direccion de la red: 196.21.44.4/30
+mascara de la red: 255.255.255.252
+broadcast de la red: 196.21.44.7/30
+rango de hosts: 196.21.44.5/30 - 196.21.44.6/30
+
+* Enlace C - F:
+usaremos 4 direcciones
+direccion de la red: 196.21.44.8/30
+mascara de la red: 255.255.255.252
+broadcast de la red: 196.21.44.11/30
+rango de hosts: 196.21.44.9/30 - 196.21.44.10/30
+
+* Enlace D - F:
+usaremos 4 direcciones
+direccion de la red: 196.21.44.12/30
+mascara de la red: 255.255.255.252
+broadcast de la red: 196.21.44.15/30
+rango de hosts: 196.21.44.13/30 - 196.21.44.14/30
+
+* Enlace E - G:
+usaremos 4 direcciones
+direccion de la red: 196.21.44.16/30
+mascara de la red: 255.255.255.252
+broadcast de la red: 196.21.44.19/30
+rango de hosts: 196.21.44.17/30 - 196.21.44.18/30
+
+* Enlace F - G:
+usaremos 4 direcciones
+direccion de la red: 196.21.44.20/30
+mascara de la red: 255.255.255.252
+broadcast de la red: 196.21.44.23/30
+rango de hosts: 196.21.44.21/30 - 196.21.44.22/30
+

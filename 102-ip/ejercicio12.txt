@@ -1,0 +1,135 @@
+12) Segmente la red acorde a su gráfica sin VLSM para soportar un crecimiento de
+X % hosts y subredes.
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+a) 172.16.0.0, X=100
+  - En este ejemplo tenemos:
+    Research: 60 hosts
+    Marketing: 24 hosts
+    Management: 15 hosts
+  - Crecimiento del 100%:
+    Research: 120 hosts
+    Marketing: 48 hosts
+    Management: 30 hosts
+ademas contamos con 2 router que que estan unidos en A - B
+
+* Research: 120 hosts
+usaremos 128 direcciones
+direccion de la red: 172.16.0.0/25
+mascara de la red: 255.255.255.128
+broadcast de la red: 172.16.0.127/25
+rango de hosts: 172.16.0.1/25 - 172.16.0.126/25
+
+* Marketing: 48 hosts
+usaremos 64 direcciones
+direccion de la red: 172.16.0.128/26
+mascara de la red: 255.255.255.192
+broadcast de la red: 172.16.0.191/26
+rango de hosts: 172.16.0.129/26 - 172.16.0.190/26
+
+* Management: 30 hosts
+usaremos 32 direcciones
+direccion de la red: 172.16.0.192/27
+mascara de la red: 255.255.255.224
+broadcast de la red: 172.16.0.223/27
+rango de hosts: 172.16.0.193/27 - 172.16.0.222/27
+
+* Enlace A - B:
+usaremos 4 direcciones
+direccion de la red: 172.16.0.224/30
+mascara de la red: 255.255.255.252
+broadcast de la red: 172.16.0.227/30
+rango de hosts: 172.16.0.225/30 - 172.16.0.226/30
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+b) 135.126.0.0, X=30
+
+  - En este ejemplo tenemos:
+    Tech: 20 hosts
+    English: 15 hosts
+    Science: 10 hosts
+  - Crecimiento del 30%:
+    Tech: 26 hosts
+    English: 20 hosts
+    Science: 13 hosts
+ademas contamos con 3 router que que estan unidos en A - B y A - C
+
+* Tech: 26 hosts
+usaremos 32 direcciones
+direccion de la red: 135.126.0.0/27
+mascara de la red: 255.255.255.224
+broadcast de la red: 135.126.0.31/27
+rango de hosts: 135.126.0.1/27 - 135.126.0.30/27
+
+* English: 20 hosts
+usaremos 32 direcciones
+direccion de la red: 135.126.0.32/27
+mascara de la red: 255.255.255.224
+broadcast de la red: 135.126.0.63/27
+rango de hosts: 135.126.0.33/27 - 135.126.0.62/27
+
+* Science: 13 hosts
+usaremos 16 direcciones
+direccion de la red: 135.126.0.64/28
+mascara de la red: 255.255.255.240
+broadcast de la red: 135.126.0.95/28
+rango de hosts: 135.126.0.65/28 - 135.126.0.94/28
+
+* Enlace A - B:
+usaremos 4 direcciones
+direccion de la red: 135.126.0.128/30
+mascara de la red: 255.255.255.252
+broadcast de la red: 135.126.0.131/30
+rango de hosts: 135.126.0.129/30 - 135.126.0.130/30
+
+* Enlace A - C:
+usaremos 4 direcciones
+direccion de la red: 135.126.0.132/30
+mascara de la red: 255.255.255.252
+broadcast de la red: 135.126.0.135/30
+rango de hosts: 135.126.0.133/30 - 135.126.0.134/30
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+c) 4.6.0.0, X=25
+
+  - En este ejemplo tenemos:
+    Sales: 185 hosts
+    Marketing: 50 hosts
+    Administracion: 30 hosts
+  - Crecimiento del 25%:
+    Sales: 232 hosts
+    Marketing: 63 hosts
+    Administracion: 38 hosts
+ademas contamos con 2 router que que estan unidos en A - B
+
+* Sales: 232 hosts
+usaremos 256 direcciones
+direccion de la red: 4.6.0.0/24
+mascara de la red: 255.255.255.0
+broadcast de la red: 4.6.0.255/24
+rango de hosts: 4.6.0.1/24 - 4.6.0.254/24
+
+* Marketing: 63 hosts
+usaremos 128 direcciones
+direccion de la red: 4.6.1.0/25
+mascara de la red: 255.255.255.128
+broadcast de la red: 4.6.1.127/25
+rango de hosts: 4.6.1.1/25 - 4.6.1.126/25
+
+* Administracion: 38 hosts
+usaremos 64 direcciones
+direccion de la red: 4.6.1.128/26
+mascara de la red: 255.255.255.192
+broadcast de la red: 4.6.1.191/26
+rango de hosts: 4.6.1.129/26 - 4.6.1.190/26
+
+* Enlace A - B:
+usaremos 4 direcciones
+direccion de la red: 4.6.1.192/30
+mascara de la red: 255.255.255.252
+broadcast de la red: 4.6.1.195/30
+rango de hosts: 4.6.1.193/30 - 4.6.1.194/30
+

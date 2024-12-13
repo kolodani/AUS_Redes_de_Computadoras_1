@@ -1,0 +1,123 @@
+15) Aprovechando las características CIDR con VLSM, dado en cada caso un
+conjunto de redes determine la configuración necesaria para disponer de los
+hosts solicitados en las interface según las figuras y el números de redes
+provistas.
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+a) 199.40.x.0/24 con x=32..35
+
+las redes que disponemos son:
+199.40.32.0/24
+199.40.33.0/24
+199.40.34.0/24
+199.40.35.0/24
+y tenemos los siguientes solicitudes de hosts:
+Sales: 400 hosts
+Research: 126 hosts
+Management: 62 hosts
+Marketing: 30 hosts
+y tenemos los Routers A, B, C y D
+y las conexiones son A - B, A - C y A - D
+
+* Sales: 400 hosts
+usaremos 512 direcciones
+direccion de la red: 199.40.32.0/23
+mascara de la red: 255.255.254.0
+broadcast de la red: 199.40.33.255/23
+rango de hosts: 199.40.32.1/23 - 199.40.33.254/23
+
+* Research: 126 hosts
+usaremos 128 direcciones
+direccion de la red: 199.40.34.0/25
+mascara de la red: 255.255.255.128
+broadcast de la red: 199.40.34.127/25
+rango de hosts: 199.40.34.1/25 - 199.40.34.126/25
+
+* Management: 62 hosts
+usaremos 64 direcciones
+direccion de la red: 199.40.34.128/26
+mascara de la red: 255.255.255.192
+broadcast de la red: 199.40.34.191/26
+rango de hosts: 199.40.34.129/26 - 199.40.34.190/26
+
+* Marketing: 30 hosts
+usaremos 32 direcciones
+direccion de la red: 199.40.34.192/27
+mascara de la red: 255.255.255.224
+broadcast de la red: 199.40.34.223/27
+rango de hosts: 199.40.34.193/27 - 199.40.34.222/27
+
+* Enlace A - B:
+usaremos 4 direcciones
+direccion de la red: 199.40.35.0/30
+mascara de la red: 255.255.255.252
+broadcast de la red: 199.40.35.3/30
+rango de hosts: 199.40.35.1/30 - 199.40.35.2/30
+
+* Enlace A - C:
+usaremos 4 direcciones
+direccion de la red: 199.40.35.4/30
+mascara de la red: 255.255.255.252
+broadcast de la red: 199.40.35.7/30
+rango de hosts: 199.40.35.5/30 - 199.40.35.6/30
+
+* Enlace A - D:
+usaremos 4 direcciones
+direccion de la red: 199.40.35.8/30
+mascara de la red: 255.255.255.252
+broadcast de la red: 199.40.35.11/30
+rango de hosts: 199.40.35.9/30 - 199.40.35.10/30
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+b) 197.28.x.0/24 con x=36..40
+
+las redes que disponemos son:
+197.28.36.0/24
+197.28.37.0/24
+197.28.38.0/24
+197.28.39.0/24
+197.28.40.0/24
+y tenemos los siguientes solicitudes de hosts:
+Miami: 614 hosts
+Boston: 39 hosts
+Denver: 29 hosts
+y tenemos los Routers A, B y C
+y las conexiones son A - C y B - C
+
+* Miami: 614 hosts
+usaremos 1024 direcciones
+direccion de la red: 197.28.36.0/22
+mascara de la red: 255.255.254.0
+broadcast de la red: 197.28.39.255/22
+rango de hosts: 197.28.36.1/22 - 197.28.39.254/22
+
+* Boston: 39 hosts
+usaremos 64 direcciones
+direccion de la red: 197.28.40.0/26
+mascara de la red: 255.255.255.192
+broadcast de la red: 197.28.40.63/26
+rango de hosts: 197.28.40.1/26 - 197.28.40.62/26
+
+* Denver: 29 hosts
+usaremos 32 direcciones
+direccion de la red: 197.28.40.64/26
+mascara de la red: 255.255.255.224
+broadcast de la red: 197.28.40.95/26
+rango de hosts: 197.28.40.65/26 - 197.28.40.94/26
+
+* Enlace A - C:
+usaremos 4 direcciones
+direccion de la red: 197.28.40.128/30
+mascara de la red: 255.255.255.252
+broadcast de la red: 197.28.40.131/30
+rango de hosts: 197.28.40.129/30 - 197.28.40.130/30
+
+* Enlace B - C:
+usaremos 4 direcciones
+direccion de la red: 197.28.40.132/30
+mascara de la red: 255.255.255.252
+broadcast de la red: 197.28.40.135/30
+rango de hosts: 197.28.40.133/30 - 197.28.40.134/30
+

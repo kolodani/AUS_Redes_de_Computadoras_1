@@ -1,0 +1,71 @@
+14) Para el siguiente gráfico los routers A, B y C administran las redes
+indicadas en la siguiente tabla. Maximize el número de hosts y la máscara a
+configurar en los mismos. Determine cuantas y cuales son las nuevas redes.
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+A - 200.15.16.0 a 200.15.19.0
+
+Router A:
+- subredes:
+    200.15.16.0
+    200.15.17.0
+    200.15.18.0
+    200.15.19.0
+- Mascara de la red:
+    255.255.252.0
+- Direccion de la red:
+    200.15.16.0/22
+- Broadcast de la red:
+    200.15.19.255/22
+- Rango de hosts disponibles:
+    200.15.16.1/22 - 200.15.19.254/22
+- Total de hosts de la red:
+    256 * 4 - 2 = 1022 hosts
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+B - 200.15.20.0 a 200.15.23.0
+
+Router B:
+- subredes:
+    200.15.20.0
+    200.15.21.0
+    200.15.22.0
+    200.15.23.0
+- Mascara de la red:
+    255.255.252.0
+- Direccion de la red:
+    200.15.20.0/22
+- Broadcast de la red:
+    200.15.23.255/22
+- Rango de hosts disponibles:
+    200.15.20.1/22 - 200.15.23.254/22
+- Total de hosts de la red:
+    256 * 4 - 2 = 1022 hosts
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+C - 200.15.24.0 a 200.15.31.0
+
+Router C:
+- subredes:
+    200.15.24.0
+    200.15.25.0
+    200.15.26.0
+    200.15.27.0
+    200.15.28.0
+    200.15.29.0
+    200.15.30.0
+    200.15.31.0
+- Mascara de la red:
+    255.255.248.0
+- Direccion de la red:
+    200.15.24.0/21
+- Broadcast de la red:
+    200.15.31.255/21
+- Rango de hosts disponibles:
+    200.15.24.1/21 - 200.15.31.254/21
+- Total de hosts de la red:
+    256 * 8 - 2 = 2046 hosts
+

@@ -398,7 +398,7 @@ i) 148.55.0.0, X=15
 ademas contamos con 4 router que que estan unidos en A - B, A - C y C - D
 tomamos el peor caso que es 2645 hosts y las redes seran de 4096 direcciones
 Mascara de la red: 255.255.240.0 o /20
-total de direcciones: 4096 * 4 = 128
+total de direcciones: 4096 * 5 = 20480
 
 * Ft. Worth: 2645 hosts
 direccion de la red: 148.55.0.0/20
